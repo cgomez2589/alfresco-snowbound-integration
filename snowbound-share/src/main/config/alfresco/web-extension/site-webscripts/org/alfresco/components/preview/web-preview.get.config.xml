@@ -1,0 +1,20 @@
+<config>
+
+   <!--
+      List of rule to decide which plugin that shall be used to preview the node's content or thumbnails.
+      The list is evaluated from the top.
+      All attributes for a condition must match.
+      When a condition matches the nodes' mimeType and/or thumbails its list of plugins are tested from the top.
+      Every plugin will be created and get an opportunity to decide if it may be used in the users browser environment.
+      If the plugin can't be used it will give a report back to the user that will be displayed if neither of the
+      plugins in the list can be used.     
+   -->
+
+   <plugin-conditions>
+	   <condition mimeType="application/pdf">
+		   <plugin>SnowboundVirtualViewer</plugin>
+	   </condition>
+
+   </plugin-conditions>
+
+</config>
