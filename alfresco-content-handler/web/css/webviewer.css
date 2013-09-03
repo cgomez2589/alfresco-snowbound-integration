@@ -1,0 +1,597 @@
+@CHARSET "ISO-8859-1";
+
+div#flexSnapAJAX {
+    position: absolute;
+    
+    height: 99%;
+    width: 100%;
+}
+
+body {
+    z-index: 1;
+    
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+div#layerManagerDiv {
+    font-family: sans-serif;
+    font-size: 9pt;
+    
+    position: absolute;
+    
+    background-color: #FFFFFF;
+    
+    height: 200px;
+    width: 200px;
+    
+    z-index: 1000;
+    
+    overflow: hidden;
+    
+    display: none;  
+}
+
+div#layerManagerActiveLayerFieldTitle {
+    margin-top: 4px;
+}
+
+select#layerManagerActiveLayerSelect {
+    font: bold 84%;
+    font-family: sans-serif;
+    background-color: #FFFFFF; 
+    border: 1px outset; 
+    width: 80px;
+}
+
+input#layerManagerAddLayerButton {
+    font-family: sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    
+    background-color: #FFFFFF; 
+    border: 1px outset; 
+    
+    height: 17px;
+    width: 25px;
+    
+    cursor: default;
+}
+
+input#layerManagerDeleteLayerButton {
+    font-family: sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    
+    background-color: #FFFFFF; 
+    border: 1px outset; 
+    
+    height: 17px;
+    width: 25px;
+    
+    cursor: default;
+}
+
+input#layerManagerRenameLayerButton {
+    font-family: sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    
+    background-color: #FFFFFF; 
+    border: 1px outset; 
+    
+    height: 17px;
+    width: 25px;
+    
+    cursor: default;
+}
+
+input#layerManagerRedactLayerButton {
+    font-family: sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    
+    background-color: #FFFFFF; 
+    border: 1px outset; 
+    
+    height: 17px;
+    width: 25px;
+    
+    cursor: default;
+}
+
+div#layerManagerVisibilityControlTitle {
+    margin-top: 4px;
+}
+
+form#layerManagerVisibilityControl {
+    font-family: sans-serif;
+    font-size: 8pt;
+    
+    height: 135px;
+    
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+    margin-left: 5px; 
+    margin-right: 5px; 
+    
+    border: 1px inset;
+    
+    overflow-y: auto;
+}
+    
+div#imageControlsDiv {
+    position: absolute;
+    
+    top: 0px;
+    
+    height: 32px;
+    width: 100%;
+    
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	cursor:default;
+}
+
+div#imageControlsDiv * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	cursor:default;
+}
+
+input#vvJumpToPageInput {
+	cursor: auto;
+	-webkit-touch-callout: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-ms-user-select: auto;
+	user-select: auto;
+}
+
+div#imageAndThumbs {
+    position: absolute;
+    
+    top: 32px;
+    bottom: 10px;
+    left: 28px;
+    right: 15px;
+}
+
+div#annToolbar {
+    position: absolute;
+    
+    top: 40px;
+    left: 0px;
+    width: 28px;
+    
+    height: 100%;
+    
+    overflow: hidden;
+    float: left;
+    
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	cursor:default;
+}
+
+div#annToolbar * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	cursor:default;
+}
+
+ul#imageTabs, ul#imageTabs *, ul#vvTextAnnContextMenuList *  {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div#vvImagePanel {
+    position: absolute;
+    
+    left: 5px;
+    right: 190px;
+    
+    height: 100%;
+    
+    float: left;
+
+    font-size: 8pt;
+}
+
+div#outerDiv {
+    position: absolute;
+
+    background-color: #EEEEEE;
+
+    top: 32px;
+    bottom: 0px;
+
+    left: 0px;
+    right: 0px;
+    
+    overflow: auto;
+    float: left;
+
+    font-size: 8pt;
+}
+
+div#vvImagePanel.noThumbs {
+    right: 0px;
+}
+
+div#vvThumbs {
+    position: absolute;
+
+    background-color: #EEEEEE;
+    
+    top: 0px;
+    right: 0px;
+    width: 175px;
+
+    height: 100%;
+
+    float: right;
+    font-size: 8pt;
+}
+
+div#vvPageThumbs {
+    position: absolute;
+
+    background-color: #EEEEEE;
+
+    top: 32px;
+    bottom: 0px;
+
+    left: 0px;
+    right: 0px;
+}
+
+div#vvDocThumbs {
+    position: absolute;
+
+    background-color: #EEEEEE;
+
+    top: 32px;
+    bottom: 0px;
+
+    left: 0px;
+    right: 0px;
+}
+
+div#vvSearch {
+    position: absolute;
+
+    overflow: hidden;
+
+    background-color: #EEEEEE;
+
+    top: 32px;
+    bottom: 0px;
+
+    left: 0px;
+    right: 0px;
+}
+
+div#vvSearchResults {
+    overflow: auto;
+
+    margin-top: 10px;
+
+    position: absolute;
+    top: 55px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+
+    padding-left: 1.4em;
+}
+
+div#innerDiv {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+td.thumbCell {
+    padding-left: 10px;
+}
+
+div.thumbBox {
+    min-width: 140px;
+    min-height: 140px;
+    margin-bottom: 25px;   
+}
+
+div.activeThumbBox {
+}
+
+div.selectedThumbBox {
+}
+
+img.displayedThumb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+
+    max-width: 140px;
+    max-height: 140px;
+
+    -moz-box-shadow: 4px 4px 4px #999999;
+	-webkit-box-shadow: 4px 4px 4px #999999;
+	box-shadow: 4px 4px 4px #999999;
+
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');
+}
+
+img.activeThumb {
+    border: 3px solid #808080;
+}
+
+img.selectedThumb {
+    border: 3px solid #2579b5;
+}
+
+.grabCursorOpen {
+    cursor: url('../resources/grabOpen.gif'), url('../resources/grabOpen.cur'), move;
+}
+
+.grabCursorClosed {
+    cursor: url('../resources/grabClosed.gif'), url('../resources/grabClosed.cur'), move;
+}
+
+span#pageIndicator {
+    display: none;
+    font-family: sans-serif;
+    cursor: crosshair;
+    padding-left: 10px;
+}
+
+span#pageIndicatorInput {
+    display: none;
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+   
+div#waitIndicator {
+    background: white none repeat scroll 0%;
+    border: 1px solid black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    visibility: hidden; 
+    padding: 10px;
+    font-family: sans-serif;
+    z-index: 1000;
+}
+
+div#waitIndicator > img {
+    vertical-align: middle;
+}
+
+span#waitIndicatorText {
+    padding-left: 10px;
+}
+
+div#translucentGrey {
+    background-color: gray;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    
+    z-index: 100;
+}
+
+.vvCanvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+canvas#vvImageCanvas {
+    z-index: 95;
+}
+
+canvas#vvAnnotationCanvas {
+    z-index: 96;
+}
+
+canvas#vvRubberbandCanvas {
+    z-index: 98;
+}
+
+canvas#vvSearchCanvas {
+    z-index: 97;
+}
+
+.vvTextAnnEditTextArea {
+    width: 100%;
+    height:100%;
+    z-index: 101;
+    resize: none;  /* Part of CSS3, probably won't work in IE */
+}
+
+.vvTextAnnEditOkButton {
+    background: url(../resources/accept.png);
+    border: none;
+
+    width: 24px;
+    height: 24px;
+}
+
+.vvTextAnnEditCancelButton {
+    background: url(../resources/cancel.png);
+    border: none;
+
+    width: 24px;
+    height: 24px;
+}
+
+div#vvPrintFramePanel {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    z-index: 2;
+    background-color: white;
+}
+
+iframe#vvPrintFrame {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    z-index: 1;
+}
+
+div#jqContextMenu {
+    overflow: hidden;
+}
+
+/* tabs stuff */
+
+.ui-tabs-panel {
+    overflow: auto;
+}
+
+div#vvImagePanel > div#ui-tabs-2 {
+    visibility: hidden; 
+    position: fixed;
+}
+
+div#vvImagePanel > div#ui-tabs-1 {
+    visibility: hidden; 
+    position: fixed;
+}
+
+span.vvTabCloseButton {
+    float: left;
+}
+
+div.vvStickyNote {
+    padding: 10px;
+
+    -moz-box-shadow: 4px 4px 4px #777777;
+	-webkit-box-shadow: 4px 4px 4px #777777;
+	box-shadow: 4px 4px 4px #777777;
+
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777777')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#777777');
+}
+
+.snowbound-text-annotation {
+    white-space: pre-wrap;
+}
+
+span#vvSearchProgressText {
+    position: absolute; 
+    width: 100%; 
+    line-height: 1.9em;
+}
+
+span#vvSearchProgressCancel {
+    position: absolute; 
+
+    width: 14px;
+    height: 14px;
+
+    background: url(../resources/searchCancel.png);
+}
+
+input#vvSearchTermField {
+    width: 114px;
+}
+
+input#vvSearchStart {
+    position: absolute;
+    background: url(../resources/searchStart.png);
+
+    left: 140px;
+
+    width: 26px;
+    height: 23px;
+
+    border: 0px;
+}
+
+input#vvSearchStart:active {
+    background: url(../resources/searchStart_down.png);
+}
+
+input#vvSearchStart:disabled {
+    background: url(../resources/searchStart.png);
+}
+
+div#vvSearchNextPreviousButtons {
+    margin-top: 3px;
+    margin-left: 43px;
+}
+
+input#vvSearchPrevious {
+    background: url(../resources/searchPrevious.png);
+
+    width: 26px;
+    height: 23px;
+
+    border: 0px;
+}
+
+input#vvSearchPrevious:active {
+    background: url(../resources/searchPrevious_down.png);
+}
+
+input#vvSearchPrevious:disabled {
+    background: url(../resources/searchPrevious.png);
+}
+
+input#vvSearchNext {
+    background: url(../resources/searchNext.png);
+
+    width: 26px;
+    height: 23px;
+
+    border: 0px;
+
+    margin-left: 10px;
+}
+
+input#vvSearchNext:active {
+    background: url(../resources/searchNext_down.png);
+}
+
+input#vvSearchNext:disabled {
+    background: url(../resources/searchNext.png);
+}

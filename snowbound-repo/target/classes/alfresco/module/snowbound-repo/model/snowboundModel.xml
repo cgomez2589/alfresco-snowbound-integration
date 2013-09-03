@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="vv:snowboundVirtualViewerModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+    <description>Snowbound Virtual Viewer Content Model</description>
+    <author>Alfresco Software</author>
+    <published>2013-07-15</published>
+    <version>1.0</version>
+
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+    </imports>
+
+    <namespaces>
+        <namespace uri="http://www.alfresco.org/model/snowbound/1.0" prefix="vv" />
+    </namespaces>
+
+<!--===========================================================================================================
+    Constraints
+============================================================================================================-->
+
+    <constraints>
+    </constraints>
+
+<!--===========================================================================================================
+    Types
+============================================================================================================-->
+
+    <types>        
+        <!-- Snowbound VirtualViewer Content Types -->
+        <type name="vv:annotation">
+            <title>Snowbound Annotation Type</title>
+            <parent>cm:content</parent>
+            <properties>
+                <property name="vv:permissionLevel">
+                    <title>Permission Level</title>
+                    <description>Annotation Permission Level</description>
+                    <type>d:int</type>
+                </property>
+                <property name="vv:redactionFlag">
+                    <title>Redaction Flag</title>
+                    <description>Annotation Redaction Flag</description>
+                    <type>d:boolean</type>
+                    <default>false</default>
+                </property>
+            </properties>
+        </type>
+        <type name="vv:bookmark">
+            <title>Snowbound Bookmark Type</title>
+            <parent>cm:content</parent>
+        </type>
+    </types>
+
+    <aspects>
+        <!-- Snowbound VirtualViewer Annotable Aspect -->
+        <aspect name="vv:annotable">
+            <title>Snowbound VirtualViewer Annotation Aspect</title>
+            <associations>
+                <child-association name="vv:annotationAssoc">
+                    <title>Annotation</title>
+                    <description>Snownbound Annotation Association</description>
+                    <target>
+                        <class>vv:annotation</class>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </target>
+                </child-association>
+            </associations>
+        </aspect>
+        <aspect name="vv:bookmarkable">
+            <title>Snowbound VirtualViewer Bookmark Aspect</title>
+            <associations>
+                <child-association name="vv:bookmarkAssoc">
+                    <title>Bookmark</title>
+                    <description>Snownbound Bookmark Association</description>
+                    <target>
+                        <class>vv:bookmark</class>
+                        <mandatory>false</mandatory>
+                        <many>false</many>
+                    </target>
+                </child-association>
+            </associations>
+        </aspect>
+    </aspects>
+</model>

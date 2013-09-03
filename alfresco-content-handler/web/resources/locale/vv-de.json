@@ -1,0 +1,288 @@
+{
+    "windowTitle": "VirtualViewer AJAX",
+    "utilityToolbar": {
+        "exportDocument": {
+            "alt": "Dokument Exportieren",
+            "title": "Dokument Exportieren"
+        },
+        "sendDocument": {
+            "alt": "Dokument Senden",
+            "title": "Dokument Senden"
+        },
+        "printDocument": {
+            "alt": "Dokument Drucken",
+            "title": "Dokument Drucken"
+        },
+        "separator": {
+            "alt": "",
+            "title": ""
+        },
+        "zoomIn": {
+            "alt": "Vergr&#246;&#223;ern",
+            "title": "Vergr&#246;&#223;ern"
+        },
+        "zoomOut": {
+            "alt": "Verkleinern",
+            "title": "Verkleinern"
+        },
+        "rubberbandZoom": {
+            "alt": "Rubber Band Zoom",
+            "title": "Rubber Band Zoom"
+        },
+        "fitToWindow": {
+            "alt": "Fit Window",
+            "title": "Fit Window"
+        },
+        "fitToHeight": {
+            "alt": "H&#246;he Anpassen",
+            "title": "H&#246;he Anpassen"
+        },
+        "fitToWidth": {
+            "alt": "Breite Anpassen",
+            "title": "Breite Anpassen"
+        },
+        "goToFirstPage": {
+            "alt": "Zur Ersten Seite",
+            "title": "Zur Ersten Seite"
+        },
+        "goToPreviousPage": {
+            "alt": "Gehe Zur Vorherigen Seite",
+            "title": "Gehe Zur Vorherigen Seite"
+        },
+        "goToNextPage": {
+            "alt": "Gehe Zur N&#228;chsten Seite",
+            "title": "Gehe Zur N&#228;chsten Seite"
+        },
+        "goToLastPage": {
+            "alt": "Gehe Zur Letzten Seite",
+            "title": "Gehe Zur Letzten Seite"
+        },
+        "rotateRight": {
+            "alt": "Nach Rechts Drehen",
+            "title": "Nach Rechts Drehen"
+        },
+        "rotateLeft": {
+            "alt": "Nach Links Drehen",
+            "title": "Nach Links Drehen"
+        },
+        "invertImage": {
+            "alt": "Bild Invertieren",
+            "title": "Bild Invertieren"
+        },
+        "saveDocument": {
+            "alt": "Dokument Speichern",
+            "title": "Dokument Speichern"
+        },
+        "showAboutDialog": {
+            "alt": "&#220;ber",
+            "title": "&#220;ber"
+        },
+        "toggleThumbnailPanel": {
+            "alt": "Thumb Toggle",
+            "title": "Thumb Toggle"
+        }
+    },
+    "annToolbar": {
+        "line": {
+            "alt": "Linie",
+            "title": "Linie"
+        },
+        "arrow": {
+            "alt": "Pfeil",
+            "title": "Pfeil"
+        },
+        "freehand": {
+            "alt": "Frei-Hand-",
+            "title": "Frei-Hand-"
+        },
+        "rectangle": {
+            "alt": "Rechteck",
+            "title": "Rechteck"
+        },
+        "filledRectangle": {
+            "alt": "Gef&#252;lltes Rechteck",
+            "title": "Gef&#252;lltes Rechteck"
+        },
+        "ellipse": {
+            "alt": "Ellipse",
+            "title": "Ellipse"
+        },
+        "filledEllipse": {
+            "alt": "Gef&#252;llte Ellipse",
+            "title": "Gef&#252;llte Ellipse"
+        },
+        "polygon": {
+            "alt": "Vieleck",
+            "title": "Vieleck"
+        },
+        "filledPolygon": {
+            "alt": "Gef&#252;lltes Polygon",
+            "title": "Gef&#252;lltes Polygon"
+        },
+        "highlightRectangle": {
+            "alt": "Hervorheben",
+            "title": "Hervorheben"
+        },
+        "stickyNote": {
+            "alt": "Haftnotiz",
+            "title": "Haftnotiz"
+        },
+        "textEdit": {
+            "alt": "Text Edit",
+            "title": "Text Edit"
+        },
+        "layerManager": {
+            "alt": "Layer-Manager",
+            "title": "Layer-Manager"
+        }
+    },
+    "layerManager": {
+        "activeLayer": {
+            "value": "Aktive Ebene"
+        },
+        "addLayer": {
+            "alt": "Layer Hinzuf&#252;gen",
+            "title": "Layer Hinzuf&#252;gen"
+        },
+        "deleteLayer": {
+            "alt": "Ebene L&#246;schen.ALT",
+            "title": "Ebene L&#246;schen.TITLE"
+        },
+        "renameLayer": {
+            "alt": "Ebene Umbenennen",
+            "title": "Ebene Umbenennen"
+        },
+        "redactLayer": {
+            "alt": "Schw&#228;rzen-Layer",
+            "title": "Schw&#228;rzen-Layer"
+        },
+        "layerVisibility": {
+            "value": "Ebenensichtbarkeit"
+        }
+    },
+    "exportDialog": {
+        "title": "W&#228;hlen Sie Das Ausgabeformat",
+        "pdf": "Pdf",
+        "tiff": "Tiff",
+        "original": "Original",
+        "includeAnnotations": "Kommentare Einschlie&#223;en",
+        "exportButton": "Exportieren",
+        "cancelButton": "Stornieren"
+    },
+    "printDialog": {
+        "title": "Druckoptionen",
+        "pages": "Seiten:",
+        "through": "Durch",
+        "color": "Farbe",
+        "grayscale": "Graustufen",
+        "includeAnnotations": "Kommentare Einschlie&#223;en",
+        "printButton": "Drucken",
+        "cancelButton": "Stornieren"
+    },
+    "thumbContextMenu": {
+        "selectAll": "Alle Ausw&#228;hlen",
+        "selectNone": "W&#228;hlen Sie None",
+        "cut": "Schneiden",
+        "copy": "Kopieren Sie",
+        "delete": "L&#246;schen",
+        "insertBefore": "Legen Sie Vor",
+        "insertAfter": "Einf&#252;gen Nach",
+        "newDocument": "Kopieren Sie In Neues Dokument"
+    },
+    "textAnnContextMenu": {
+        "newTextAnn": "New Textanotation"
+    },
+    "thumbnails": {
+        "pageTab": "Seiten",
+        "documentTab": "Unterlagen"
+    },
+    "loadWaitDialog": "Bitte Warten Sie, W&#228;hrend Dokument Wird Geladen",
+    "saveWaitDialog": {
+        "value": "Bitte Warten Sie, W&#228;hrend Document Ist Das Speichern"
+    },
+    "deleteAnnDialog": {
+        "title": "L&#246;schen Annotation Titel",
+        "value": "L&#246;schen Annotation Inhalt",
+        "deleteButton": "L&#246;schen",
+        "cancelButton": "Stornieren"
+    },
+    "newDocumentDialog": {
+        "title": "Neues Dokument Erstellen",
+        "documentId": "Dokument-Id",
+        "okButton": "Ok",
+        "cancelButton": "Stornieren",
+        "error": {
+            "value": "Bitte Geben Sie Eine G&#252;ltige Dokument-Id!"
+        }
+    },
+    "addLayerDialog": {
+        "layerName": "Layer-Name"
+    },
+    "deleteLayerDialog": {
+        "value": "Sind Sie Sicher, Dass Sie Layer L&#246;schen"
+    },
+    "renameLayerDialog": {
+        "layerName": "Layer-Name"
+    },
+    "aboutDialog" : {
+        "productName": "VirtualViewer AJAX",
+        "versionPrefix": "V",
+        "okButton": "Ok",
+        "helpButton": "Hilfe",
+        "text": "&reg;1996-2013 ALL RIGHTS RESERVED.  (LICENSING INFORMATION). VIRTUALVIEWER AND THE VIRTUALVIEWER LOGO ARE TRADEMARKS OF THE SNOWBOUND SOFTWARE CORPORATION. ALL RIGHTS RESERVED. SOME OF THE TRADEMARKS USED UNDER LICENSE FROM PARTNER COMPANIES."
+    },
+    "annPopUp" : {
+        "editText" : {
+            "alt": "Text Bearbeiten",
+            "title": "Text Bearbeiten",
+            "value": "Text Bearbeiten"
+        },
+        "lineColorGroupLabel" : {
+            "value": "Line Farbe:"
+        },
+        "borderColorGroupLabel" : {
+            "value": "Randfarbe:"
+        },
+        "fillColorGroupLabel" : {
+            "value": "F&#252;llfarbe:"
+        },
+        "fontColorGroupLabel" : {
+            "value": "Schriftfarbe:"
+        },
+        "colorGrid" : {
+            "more" : "Mehr Farben ...",
+            "custom" : "Custom:"
+        },
+        "lineSizeGroupLabel" : {
+            "value": "Nennweite:" 
+        },
+        "borderSizeGroupLabel" : {
+            "value": "Border Size:" 
+        },
+        "fontFaceLabel" : {
+            "value": "Font:"
+        },
+        "fontSizeLabel" : {
+            "value": "Font-Size:"
+        },
+        "bold" : "Bold",
+        "italic" : "Italic",
+        "deleteAnn" : {
+            "alt" : "Delete",
+            "title" : "Delete",
+            "value" : "Delete"
+        }
+    },
+    "errors": {
+        "deleteLayerPermission": "Sie Haben Keine Berechtigung, Diese Ebene Zu L&#246;schen.",
+        "renameLayerPermission": "Sie Haben Keine Berechtigung, Diese Ebene Umbenennen.",
+        "createAnnOnLayerPermission": "Sie Haben Keine Berechtigung Um Anmerkungen Auf Dieser Ebene Erstellen.",
+        "editAnnOnLayerPermission": "Sie Haben Keine Berechtigung Um Anmerkungen Auf Dieser Ebene Bearbeiten.",
+        "invalidLayerName": "Ung&#252;ltige Layer-Namen. Bitte W&#228;hlen Sie Einen Neuen Layer-Name:",
+        "layerNameAlreadyExists": "Eine Schicht Mit Diesem Namen Existiert Bereits.",
+        "tabTooManyOpen": "Zu Viele Ge&#246;ffnete Tabs.",
+        "tabIndexOutOfBounds": "Tab Index-Wert Ist Ung&#252;ltig.",
+        "tabCloseLastTab": "Schlie&#223;en Letzte Registerkarte Ist Nicht Erlaubt.",
+        "invalidColorString": "Der Farbwert Ist Ung&#252;ltig."
+    }
+}

@@ -1,0 +1,273 @@
+/* Image Controls Toolbar */
+
+/*
+div#exportDocument {
+    background: transparent url("../resources/exportDocument.noalpha.png") no-repeat top left;
+}
+
+div#exportDocument.mouseDown {
+    background: transparent url("../resources/exportDocument_down.noalpha.png") no-repeat top left;
+}
+
+div#sendDocumentAnn {
+    background: transparent url("../resources/sendDocumentAnn.noalpha.png") no-repeat top left;
+}
+
+div#sendDocumentAnn.mouseDown {
+    background: transparent url("../resources/sendDocumentAnn_down.noalpha.png") no-repeat top left;
+}
+
+div#print {
+    background: transparent url("../resources/print.noalpha.png") no-repeat top left;
+}
+
+div#print.mouseDown {
+    background: transparent url("../resources/print_down.noalpha.png") no-repeat top left;
+}
+
+div#zoom_in {
+    background: transparent url("../resources/zoom_in.noalpha.png") no-repeat top left;
+}
+
+div#zoom_in.mouseDown {
+    background: transparent url("../resources/zoom_in_down.noalpha.png") no-repeat top left;
+}
+
+div#zoom_out {
+    background: transparent url("../resources/zoom_out.noalpha.png") no-repeat top left;
+}
+
+div#zoom_out.mouseDown {
+    background: transparent url("../resources/zoom_out_down.noalpha.png") no-repeat top left;
+}
+
+div#rubber_band {
+    background: transparent url("../resources/rubber_band.noalpha.png") no-repeat top left;
+}
+
+div#rubber_band.mouseDown {
+    background: transparent url("../resources/rubber_band_down.noalpha.png") no-repeat top left;
+}
+
+div#fit_to_window {
+    background: transparent url("../resources/fit_to_window.noalpha.png") no-repeat top left;
+}
+
+div#fit_to_window.mouseDown {
+    background: transparent url("../resources/fit_to_window_down.noalpha.png") no-repeat top left;
+}
+
+div#fit_to_height {
+    background: transparent url("../resources/fit_to_height.noalpha.png") no-repeat top left;
+}
+
+div#fit_to_height.mouseDown {
+    background: transparent url("../resources/fit_to_height_down.noalpha.png") no-repeat top left;
+}
+
+div#fit_to_width {
+    background: transparent url("../resources/fit_to_width.noalpha.png") no-repeat top left;
+}
+
+div#fit_to_width.mouseDown {
+    background: transparent url("../resources/fit_to_width_down.noalpha.png") no-repeat top left;
+}
+
+div#go_to_first {
+    background: transparent url("../resources/go_to_first.noalpha.png") no-repeat top left;
+}
+
+div#go_to_first.mouseDown {
+    background: transparent url("../resources/go_to_first_down.noalpha.png") no-repeat top left;
+}
+
+div#previous {
+    background: transparent url("../resources/previous.noalpha.png") no-repeat top left;
+}
+
+div#previous.mouseDown {
+    background: transparent url("../resources/previous_down.noalpha.png") no-repeat top left;
+}
+
+div#next {
+    background: transparent url("../resources/next.noalpha.png") no-repeat top left;
+}
+
+div#next.mouseDown {
+    background: transparent url("../resources/next_down.noalpha.png") no-repeat top left;
+}
+
+div#go_to_last {
+    background: transparent url("../resources/go_to_last.noalpha.png") no-repeat top left;
+}
+
+div#go_to_last.mouseDown {
+    background: transparent url("../resources/go_to_last_down.noalpha.png") no-repeat top left;
+}
+
+div#rotate_right {
+    background: transparent url("../resources/rotate_right.noalpha.png") no-repeat top left;
+}
+
+div#rotate_right.mouseDown {
+    background: transparent url("../resources/rotate_right_down.noalpha.png") no-repeat top left;
+}
+
+div#rotate_left {
+    background: transparent url("../resources/rotate_left.noalpha.png") no-repeat top left;
+}
+
+div#rotate_left.mouseDown {
+    background: transparent url("../resources/rotate_left_down.noalpha.png") no-repeat top left;
+}
+
+div#invert_image {
+    background: transparent url("../resources/invert_image.noalpha.png") no-repeat top left;
+}
+
+div#invert_image.mouseDown {
+    background: transparent url("../resources/invert_image_down.noalpha.png") no-repeat top left;
+}
+
+div.separator {
+    background: transparent url("../resources/separator.png") no-repeat top left;
+    
+    width: 1px;
+    height: 24px;
+    float: left;
+}
+
+div#saveDocument {
+    background: transparent url("../resources/saveDocument.noalpha.png") no-repeat top left;
+}
+
+div#saveDocument.mouseDown {
+    background: transparent url("../resources/saveDocument_down.noalpha.png") no-repeat top left;
+}
+
+
+div#about {
+    background: transparent url("../resources/about.noalpha.png") no-repeat top left;
+}
+
+div#about.mouseDown {
+    background: transparent url("../resources/about_down.noalpha.png") no-repeat top left;
+}
+*/
+
+
+/* Annotation Toolbar */
+
+/*
+div#annLine {
+    background: transparent url("../resources/annLine.noalpha.png") no-repeat top left;
+}
+
+div#annLine.mouseDown {
+    background: transparent url("../resources/annLine_down.noalpha.png") no-repeat top left;
+}
+
+div#annArrow {
+    background: transparent url("../resources/annArrow.noalpha.png") no-repeat top left;
+}
+
+div#annArrow.mouseDown {
+    background: transparent url("../resources/annArrow_down.noalpha.png") no-repeat top left;
+}
+
+div#annFreehand {
+    background: transparent url("../resources/annFreehand.noalpha.png") no-repeat top left;
+}
+
+div#annFreehand.mouseDown {
+    background: transparent url("../resources/annFreehand_down.noalpha.png") no-repeat top left;
+}
+
+div#annRect {
+    background: transparent url("../resources/annRect.noalpha.png") no-repeat top left;
+}
+
+div#annRect.mouseDown {
+    background: transparent url("../resources/annRect_down.noalpha.png") no-repeat top left;
+}
+
+div#annFilledRect {
+    background: transparent url("../resources/annFilledRect.noalpha.png") no-repeat top left;
+}
+
+div#annFilledRect.mouseDown {
+    background: transparent url("../resources/annFilledRect_down.noalpha.png") no-repeat top left;
+}
+
+div#annEllipse {
+    background: transparent url("../resources/annEllipse.noalpha.png") no-repeat top left;
+}
+
+div#annEllipse.mouseDown {
+    background: transparent url("../resources/annEllipse_down.noalpha.png") no-repeat top left;
+}
+
+div#annFilledEllipse {
+    background: transparent url("../resources/annFilledEllipse.noalpha.png") no-repeat top left;
+}
+
+div#annFilledEllipse.mouseDown {
+    background: transparent url("../resources/annFilledEllipse_down.noalpha.png") no-repeat top left;
+}
+
+div#annPolygon {
+    background: transparent url("../resources/annPolygon.noalpha.png") no-repeat top left;
+}
+
+div#annPolygon.mouseDown {
+    background: transparent url("../resources/annPolygon_down.noalpha.png") no-repeat top left;
+}
+
+div#annFilledPolygon {
+    background: transparent url("../resources/annFilledPolygon.noalpha.png") no-repeat top left;
+}
+
+div#annFilledPolygon.mouseDown {
+    background: transparent url("../resources/annFilledPolygon_down.noalpha.png") no-repeat top left;
+}
+
+div#annHighlightRect {
+    background: transparent url("../resources/annHighlightRect.noalpha.png") no-repeat top left;
+}
+
+div#annHighlightRect.mouseDown {
+    background: transparent url("../resources/annHighlightRect_down.noalpha.png") no-repeat top left;
+}
+
+div#annStickyNote {
+    background: transparent url("../resources/annStickyNote.noalpha.png") no-repeat top left;
+}
+
+div#annStickyNote.mouseDown {
+    background: transparent url("../resources/annStickyNote_down.noalpha.png") no-repeat top left;
+}
+
+div#annTextEdit {
+    background: transparent url("../resources/annTextEdit.noalpha.png") no-repeat top left;
+}
+
+div#annTextEdit.mouseDown {
+    background: transparent url("../resources/annTextEdit_down.noalpha.png") no-repeat top left;
+}
+
+div#annSave {
+    background: transparent url("../resources/annSave.noalpha.png") no-repeat top left;
+}
+
+div#annSave.mouseDown {
+    background: transparent url("../resources/annSave_down.noalpha.png") no-repeat top left;
+}
+
+div#layerMgr {
+    background: transparent url("../resources/layerMgr.noalpha.png") no-repeat top left;
+}
+
+div#layerMgr.mouseDown {
+    background: transparent url("../resources/layerMgr_down.noalpha.png") no-repeat top left;
+}
+*/

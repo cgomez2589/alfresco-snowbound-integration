@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+
+form#layerManagerActiveLayerField {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+form#layerManagerVisibilityControl {
+    height: 125px;
+    
+    border: 1px solid;
+}

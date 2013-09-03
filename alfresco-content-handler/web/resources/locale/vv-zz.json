@@ -1,0 +1,295 @@
+{
+    "windowTitle": "VIRTUALVIEWER AJAX",
+    "utilityToolbar": {
+        "exportDocument": {
+            "alt": "EXPORTDOCUMENT.ALT",
+            "title": "EXPORTDOCUMENT.TITLE"
+        },
+        "sendDocument": {
+            "alt": "SENDDOCUMENT.ALT",
+            "title": "SENDDOCUMENT.TITLE"
+        },
+        "printDocument": {
+            "alt": "PRINTDOCUMENT.ALT",
+            "title": "PRINTDOCUMENT.TITLE"
+        },
+        "separator": {
+            "alt": "SEPARATOR.ALT",
+            "title": "SEPARATOR.TITLE"
+        },
+        "zoomIn": {
+            "alt": "ZOOMIN.ALT",
+            "title": "ZOOMIN.TITLE"
+        },
+        "zoomOut": {
+            "alt": "ZOOMOUT.ALT",
+            "title": "ZOOMOUT.TITLE"
+        },
+        "rubberbandZoom": {
+            "alt": "RUBBERBANDZOOM.ALT",
+            "title": "RUBBERBANDZOOM.TITLE"
+        },
+        "fitToWindow": {
+            "alt": "FITWINDOW.ALT",
+            "title": "FITWINDOW.TITLE"
+        },
+        "fitToHeight": {
+            "alt": "FITHEIGHT.ALT",
+            "title": "FITHEIGHT.TITLE"
+        },
+        "fitToWidth": {
+            "alt": "FITWIDTH.ALT",
+            "title": "FITWIDTH.TITLE"
+        },
+        "goToFirstPage": {
+            "alt": "GOTOFIRSTPAGE.ALT",
+            "title": "GOTOFIRSTPAGE.TITLE"
+        },
+        "goToPreviousPage": {
+            "alt": "GOTOPREVIOUSPAGE.ALT",
+            "title": "GOTOPREVIOUSPAGE.TITLE"
+        },
+        "goToNextPage": {
+            "alt": "GOTONEXTPAGE.ALT",
+            "title": "GOTONEXTPAGE.TITLE"
+        },
+        "goToLastPage": {
+            "alt": "GOTOLASTPAGE.ALT",
+            "title": "GOTOLASTPAGE.TITLE"
+        },
+        "rotateRight": {
+            "alt": "ROTATERIGHT.ALT",
+            "title": "ROTATERIGHT.TITLE"
+        },
+        "rotateLeft": {
+            "alt": "ROTATELEFT.ALT",
+            "title": "ROTATELEFT.TITLE"
+        },
+        "invertImage": {
+            "alt": "INVERTIMAGE.ALT",
+            "title": "INVERTIMAGE.TITLE"
+        },
+        "saveDocument": {
+            "alt": "SAVEDOCUMENT.ALT",
+            "title": "SAVEDOCUMENT.TITLE"
+        },
+        "showAboutDialog": {
+            "alt": "SHOWABOUTDIALOG.ALT",
+            "title": "SHOWABOUTDIALOG.TITLE"
+        },
+        "toggleThumbnailPanel": {
+            "alt": "THUMBTOGGLE.ALT",
+            "title": "THUMBTOGGLE.TITLE"
+        }
+    },
+    "annToolbar": {
+        "line": {
+            "alt": "LINE.ALT",
+            "title": "LINE.TITLE"
+        },
+        "arrow": {
+            "alt": "ARROW.ALT",
+            "title": "ARROW.TITLE"
+        },
+        "freehand": {
+            "alt": "FREEHAND.ALT",
+            "title": "FREEHAND.TITLE"
+        },
+        "rectangle": {
+            "alt": "RECTANGLE.ALT",
+            "title": "RECTANGLE.TITLE"
+        },
+        "filledRectangle": {
+            "alt": "FILLEDRECTANGLE.ALT",
+            "title": "FILLEDRECTANGLE.TITLE"
+        },
+        "ellipse": {
+            "alt": "ELLIPSE.ALT",
+            "title": "ELLIPSE.TITLE"
+        },
+        "filledEllipse": {
+            "alt": "FILLEDELLIPSE.ALT",
+            "title": "FILLEDELLIPSE.TITLE"
+        },
+        "polygon": {
+            "alt": "POLYGON.ALT",
+            "title": "POLYGON.TITLE"
+        },
+        "filledPolygon": {
+            "alt": "FILLEDPOLYGON.ALT",
+            "title": "FILLEDPOLYGON.TITLE"
+        },
+        "highlightRectangle": {
+            "alt": "HIGHLIGHT.ALT",
+            "title": "HIGHLIGHT.TITLE"
+        },
+        "stickyNote": {
+            "alt": "STICKYNOTE.ALT",
+            "title": "STICKYNOTE.TITLE"
+        },
+        "textEdit": {
+            "alt": "TEXTEDIT.ALT",
+            "title": "TEXTEDIT.TITLE"
+        },
+        "layerManager": {
+            "alt": "LAYERMANAGER.ALT",
+            "title": "LAYERMANAGER.TITLE"
+        }
+    },
+    "layerManager": {
+        "activeLayer": {
+            "value": "ACTIVELAYER"
+        },
+        "addLayer": {
+            "alt": "ADDLAYER.ALT",
+            "title": "ADDLAYER.TITLE"
+        },
+        "deleteLayer": {
+            "alt": "DELETELAYER.ALT",
+            "title": "DELETELAYER.TITLE"
+        },
+        "renameLayer": {
+            "alt": "RENAMELAYER.ALT",
+            "title": "RENAMELAYER.TITLE"
+        },
+        "redactLayer": {
+            "alt": "REDACTLAYER.ALT",
+            "title": "REDACTLAYER.TITLE"
+        },
+        "layerVisibility": {
+            "value": "LAYERVISIBILITY"
+        }
+    },
+    "exportDialog": {
+        "title": "SELECT OUTPUT FORMAT",
+        "pdf": "PDF",
+        "tiff": "TIFF",
+        "original": "ORIGINAL",
+        "includeAnnotations": "INCLUDEANNOTATIONS",
+        "exportButton": "EXPORT",
+        "cancelButton": "CANCEL"
+    },
+    "printDialog": {
+        "title": "PRINTING OPTIONS",
+        "pages": "PAGES: ",
+        "through": "THROUGH ",
+        "color": "COLOR",
+        "grayscale": "GRAYSCALE",
+        "includeAnnotations": "INCLUDEANNOTATIONS",
+        "printButton": "PRINT",
+        "cancelButton": "CANCEL"
+    },
+    "thumbContextMenu": {
+        "selectAll": "SELECTALL",
+        "selectNone": "SELECTNONE",
+        "cut": "CUT",
+        "copy": "COPY",
+        "delete": "DELETE",
+        "insertBefore": "INSERTBEFORE",
+        "insertAfter": "INSERTAFTER",
+        "newDocument": "COPYTONEWDOCUMENT"
+    },
+    "textAnnContextMenu": {
+        "newTextAnn": "NEWTEXTANN"
+    },
+    "thumbnails": {
+        "pageTab": "PAGES",
+        "documentTab": "DOCS"
+    },
+    "loadWaitDialog": "LOADWAITINDICATOR",
+    "saveWaitDialog": {
+        "value": "SAVEWAITINDICATOR"
+    },
+    "deleteAnnDialog": {
+        "title": "DELETEANNTITLE",
+        "value": "DELETEANNCONTENTS",
+        "deleteButton": "DELETE",
+        "cancelButton": "CANCEL"
+    },
+    "newDocumentDialog": {
+        "title": "CREATE NEW DOCUMENT",
+        "documentId": "DOCUMENT ID",
+        "okButton": "OK",
+        "cancelButton": "CANCEL",
+        "error": {
+            "value": "PLEASE ENTER A VALID DOCUMENT ID!"
+        }
+    },
+    "addLayerDialog": {
+        "layerName": "LAYER NAME"
+    },
+    "deleteLayerDialog": {
+        "value": "ARE YOU SURE YOU WISH TO DELETE LAYER"
+    },
+    "renameLayerDialog": {
+        "layerName": "LAYER NAME"
+    },
+    "aboutDialog" : {
+        "productName": "VIRTUALVIEWER AJAX",
+        "versionPrefix": "V",
+        "okButton": "OK",
+        "helpButton": "HELP",
+        "text": "&reg;1996-2013 ALL RIGHTS RESERVED.  (LICENSING INFORMATION). VIRTUALVIEWER AND THE VIRTUALVIEWER LOGO ARE TRADEMARKS OF THE SNOWBOUND SOFTWARE CORPORATION. ALL RIGHTS RESERVED. SOME OF THE TRADEMARKS USED UNDER LICENSE FROM PARTNER COMPANIES."
+    },
+    "annPopUp" : {
+        "editText" : {
+            "alt": "EDITTEXT.ALT",
+            "title": "EDITTEXT.TITLE",
+            "value": "EDITTEXT.VALUE"
+        },
+        "lineColorGroupLabel" : {
+            "value": "LINECOLOR:"
+        },
+        "borderColorGroupLabel" : {
+            "value": "BORDERCOLOR:"
+        },
+        "fillColorGroupLabel" : {
+            "value": "FILLCOLOR:"
+        },
+        "fontColorGroupLabel" : {
+            "value": "FONTCOLOR:"
+        },
+        "colorGrid" : {
+            "more" : "MORECOLORS...",
+            "custom" : "CUSTOM:"
+        },
+        "lineSizeGroupLabel" : {
+            "value": "LINESIZE:" 
+        },
+        "borderSizeGroupLabel" : {
+            "value": "BORDERSIZE:" 
+        },
+        "fontFaceLabel" : {
+            "value": "FONT:"
+        },
+        "fontSizeLabel" : {
+            "value": "FONTSIZE:"
+        },
+        "bold" : "BOLD",
+        "italic" : "ITALIC",
+        "deleteAnn" : {
+            "alt" : "DELETE.ALT",
+            "title" : "DELETE.TITLE",
+            "value" : "DELETE.VALUE"
+        }
+    },
+    "search" : {
+        "startSearch" : {
+            "alt" : "STARTSEARCH.ALT",
+            "title" : "STARTSEARCH.TITLE"
+        }
+    },
+    "errors": {
+        "deleteLayerPermission": "YOU DO NOT HAVE PERMISSION TO DELETE THIS LAYER.",
+        "renameLayerPermission": "YOU DO NOT HAVE PERMISSION TO RENAME THIS LAYER.",
+        "createAnnOnLayerPermission": "YOU DO NOT HAVE PERMISSION TO CREATE ANNOTATIONS ON THIS LAYER.",
+        "editAnnOnLayerPermission": "YOU DO NOT HAVE PERMISSION TO EDIT ANNOTATIONS ON THIS LAYER.",
+        "invalidLayerName": "INVALID LAYER NAME. PLEASE CHOOSE A NEW LAYER NAME:",
+        "layerNameAlreadyExists": "A LAYER WITH THAT NAME ALREADY EXISTS.",
+        "tabTooManyOpen": "TOO MANY OPEN TABS.",
+        "tabIndexOutOfBounds": "TAB INDEX OUT OF BOUNDS.",
+        "tabCloseLastTab": "CLOSING LAST TAB IS NOT ALLOWED.",
+        "searchNotSearchable": "DOCUMENT IS NOT SEARCHABLE.",
+        "invalidColorString": "INVALID COLOR STRING."
+    }
+}
