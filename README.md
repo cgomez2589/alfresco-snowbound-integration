@@ -67,7 +67,7 @@ To add additional MIME types refer to the web-preview.get.config.xml file in the
 
 
 # TODO:
-* Write test cases so that we're following good test-driven development best practices.
+* Write test cases so that we're following proper test-driven development best practices.
 * Refactor code so that we're throwing proper exceptions.
 * Integrate VirtualViewer permissions with Alfresco permissions via Web Scripts.
 * Create new doclib view to render all documents in a given folder as separate tabs (pagination necessary).
