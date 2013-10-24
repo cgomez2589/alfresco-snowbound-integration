@@ -1,8 +1,0 @@
-<webscript>
-	<shortname>Get Document</shortname>
-	<description>Get Document</description>
-	<url>/integrations/snowbound/GetDocument?nodeRef={nodeRef}</url>
-	<authentication>user</authentication>
-    <format default="json"></format>
-    <family>Snowbound Integration</family>
-</webscript>
