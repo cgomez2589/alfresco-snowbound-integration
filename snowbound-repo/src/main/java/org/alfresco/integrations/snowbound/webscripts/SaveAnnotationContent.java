@@ -128,4 +128,8 @@ public class SaveAnnotationContent  extends AbstractWebScript {
     private void addAnnotableAspect(){
         nodeService.addAspect(documentNodeRef, SnowboundContentModel.ASPECT_ANNOTABLE, null);
     }
+
+    public void setServiceRegistry(ServiceRegistry serviceRegistry) {
+        this.serviceRegistry = serviceRegistry;
+    }
 }
