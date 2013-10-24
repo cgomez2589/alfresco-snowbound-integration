@@ -36,12 +36,10 @@ public class SavePreferenceXMLContent extends AbstractWebScript {
     private NodeService nodeService;
     private NodeRef documentNodeRef = null;
 
-    public SavePreferenceXMLContent(){
-        nodeService = serviceRegistry.getNodeService();
-    }
-
     public void execute(WebScriptRequest request, WebScriptResponse response) throws IOException {
         try{
+            nodeService = serviceRegistry.getNodeService();
+
             PreferenceXML preferenceXML = new Gson().fromJson(request.getContent().getContent(), PreferenceXML.class);
 
             if(!nodeService.hasAspect(documentNodeRef, SnowboundContentModel.ASPECT_ANNOTABLE)){
