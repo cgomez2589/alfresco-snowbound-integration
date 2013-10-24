@@ -31,7 +31,7 @@
 		below as the AMP module version. Instead we use the
 		buildnumber-maven-plugin. This requires a scm connection.
 	-->
-	<version>1.0-SNAPSHOT</version>
+	<version>0.1-RC1</version>
 	<description>snowbound-repo</description>
     <repositories>
         <repository>
