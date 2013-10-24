@@ -19,18 +19,22 @@
 <!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
 
 <beans>
-    <bean id="snowbound-properties"
-          parent="common-placeholder-configurer" class="org.alfresco.config.JndiPropertyPlaceholderConfigurer">
+    <bean id="snowbound-properties" parent="common-placeholder-configurer">
         <property name="locations">
             <list>
                 <value>classpath*:alfresco/snowbound.properties</value>
+                
+                <!-- override properties file --> 
+                <value>classpath*:alfresco/extension/custom-snowbound.properties</value>
             </list>
         </property>
-        <property name="order">
-            <value>50</value>
-        </property>
-        <property name="searchSystemEnvironment">
-            <value>false</value>
+        <property name="properties">
+            <props>
+                <prop key="snowbound.protocol">null</prop>
+                <prop key="snowbound.host">null</prop>
+                <prop key="snowbound.port">0</prop>
+                <prop key="snowbound.context">null</prop>
+            </props>
         </property>
     </bean>
 </beans>

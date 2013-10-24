@@ -34,14 +34,12 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
     private PreferenceXML preferenceXML = null;
     private Map<String,Annotation> annotationHashMap = null;
 
-
     private String alfrescoBaseUrl = null;
 
 
     public RestContentHandler(){
         this.setPropertiesFile();
     }
-
 
     private void setPropertiesFile(){
 
@@ -305,8 +303,7 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             logger.log(Logger.FINEST, "  saveDocumentContents, CLIENT ID: " + authenticationTicket);
             logger.log(Logger.FINEST, "  saveDocumentContents, DOC ID: " + documentKey);
 
-            if (documentContent == null)
-            {
+            if (documentContent == null){
                 return null;
             }
 
@@ -342,10 +339,8 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
 
         try{
             if (annotationContent != null){
-                logger.log(Logger.FINEST, " Annotation byte array is not null: " + annotationContent.length);
                 if (!annProperties.isEmpty()){
                     Annotation annotation = new Annotation();
-                    logger.log(Logger.FINEST, " Annotation Property Not Empty: " + annProperties.isEmpty());
 
                     Boolean tmpRedactionFlag = (Boolean) annProperties.get(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG);
                     logger.log(Logger.FINEST, " Annotation Redaction Flag: " + tmpRedactionFlag);
@@ -361,14 +356,10 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                         annotation.setRedactionFlag(redactionFlag);
                     }
 
-//                    if (tmpPermissionLevel != null){
-//                        permissionLevel = tmpPermissionLevel.intValue();
-//                        annotation.setPermissionLevel(permissionLevel);
-//                    }
                     annotation.setPermissionLevel(PERM_DELETE.intValue());
-
                     if (permissionLevel <= PERM_REDACTION.intValue()){
                         annotationLayer += "-redactionBurn";
+                        annotation.setPermissionLevel(PERM_REDACTION.intValue());
                     }
                     else if (redactionFlag == true){
                         annotationLayer += "-redactionEdit";
@@ -377,33 +368,21 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                     annotation.setName(annotationLayer);
                     annotation.setParentNodeRef(nodeRef.replace("workspace/", "workspace://"));
 
-
-                    for (Map.Entry entry : annotationHashMap.entrySet()) {
-                        logger.log(Logger.FINEST, "key,val: " + entry.getKey() + "," + entry.getValue());
-                    }
-
-                    logger.log(Logger.FINEST, " Annotation Layer Name: " + annotationLayer);
-
-                    if(annotationHashMap != null){
-                        if(annotationHashMap.isEmpty()){
-                            annotation.setId("");
-                        }
-                        else{
-                            annotation.setId(annotationHashMap.get(annotationLayer).getId());
-                        }
-                    }
-                    else{
+                    if(isNullOrEmpty(annotationHashMap)){
                         annotation.setId("");
                     }
-
+                    else{
+                        if(annotationHashMap.containsKey(annotationLayer)){
+                            annotation.setId(annotationHashMap.get(annotationLayer).getId());
+                        }
+                        else{
+                            annotation.setId("");
+                        }
+                    }
 
                     String jsonString = new Gson().toJson(annotation);
-                    logger.log(Logger.FINEST, "Annotation Json String: " + jsonString);
-
                     GenericUrl saveAnnotationContentUrl = new GenericUrl(
                             this.alfrescoBaseUrl + "/service/integrations/snowbound/SaveAnnotationContent?alf_ticket=" + authenticationTicket);
-                    logger.log(Logger.FINEST, " Using url: " + saveAnnotationContentUrl);
-
                     postJsonHttpRequest(saveAnnotationContentUrl, jsonString.getBytes());
 
                     logger.log(Logger.FINEST, "  saveAnnotationContent, Saving layer: " + annotationLayer);
@@ -440,7 +419,7 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             myBookmark.setName(documentID + ".bookmarks.xml");
             myBookmark.setContent(bookmarkContent);
 
-            if(annotationHashMap.isEmpty()){
+            if(isNullOrEmpty(annotationHashMap)){
                 myBookmark.setId("");
             }
             else{
@@ -496,20 +475,7 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
     public boolean hasAnnotations(ContentHandlerInput contentHandlerInput) throws FlexSnapSIAPIException {
         logger.log(Logger.FINEST, "Entering hasAnnotations method...");
 
-        boolean hasAnnotations = false;
-
-        if(annotationHashMap == null){
-            if(annotationHashMap.isEmpty()){
-                hasAnnotations = false;
-            }
-            else{
-                hasAnnotations = true;
-            }
-        }
-        else{
-            hasAnnotations = false;
-        }
-        return hasAnnotations;
+        return isNullOrEmpty(annotationHashMap);
     }
 
     public ContentHandlerResult getClientPreferencesXML(ContentHandlerInput contentHandlerInput) throws FlexSnapSIAPIException {
@@ -606,5 +572,8 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    private static boolean isNullOrEmpty(final Map<String,Annotation> annotationHashMap){
+        return annotationHashMap == null || annotationHashMap.isEmpty();
     }
 }
