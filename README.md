@@ -47,7 +47,7 @@ $ ant install
 * Upload a PDF, navigate to the document-details view, and confirm that the Snowbound VirtualViewer renders the PDF as opposed to the Alfresco flash web-preview.
 
 
-# Mime Type Current Configured
+# MIME Types Currently Configured
 * application/pdf
 * image/tiff
 * image/bmp
@@ -60,6 +60,15 @@ $ ant install
 * application/vnd.ms-powerpoint
 * application/vnd.openxmlformats-officedocument.presentationml.presentation
 * application/vnd.ms-outlook
-* image/vnd.dwg
 
 For the full list of supported file types, refer to Appendix D in the VirtualViewer documentation: http://www.virtualviewer.com/VirtualViewerJavaAJAXHelp/virtualviewer.htm
+
+To add additional MIME types refer to the web-preview.get.config.xml file in the snowbound-share project.
+
+
+# TODO:
+* Write test cases so that we're following good test-driven development best practices.
+* Refactor code so that we're throwing proper exceptions.
+* Integrate VirtualViewer permissions with Alfresco permissions via Web Scripts.
+* Create new doclib view to render all documents in a given folder as separate tabs (pagination necessary).
+* Create a multi-select option to open multiple documents in a new Share UI page.
