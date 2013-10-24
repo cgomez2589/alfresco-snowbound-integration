@@ -10,6 +10,12 @@ vvConfig = {
     // by only requesting the final zoom level
     zoomTimeout: 500, 
 
+    // Wait X milliseconds before requesting the adjusted images.  This
+    // exists to throttle the number of image requests sent to the server.
+    // If the user quickly slides the sliders back and forth this will wait
+    // X seconds before requsting the updated image.
+    pictureControlsTimeout: 200,
+
     // Wait X milliseconds before displaying the "Please wait while your
     // image is loaded." dialog
     waitDialogTimeout: 1000,
@@ -43,14 +49,18 @@ vvConfig = {
     printShowTypeToggles: false,
 
     // Should we burn the annotations into the image when exporting
-    exportBurnAnnotations: false,
+    exportBurnAnnotations: true,
 
     // Create a new annotation layer for each annotation
     oneLayerPerAnnotation: false,
 
     // Reload the document model after a save.  Used for systems like
     // FileNet which generate a documentId on the server
-    reloadDocumentOnSave: false,
+    reloadDocumentOnSave: true,
+
+    // If true, newly added text annotations will immediately enter 'edit'
+    // mode with the contents highlighted.
+    immediatelyEditTextAnnotations: true,
 
     // The following three help parameters are passed to window.open when
     // creating the help window.
@@ -72,7 +82,7 @@ vvConfig = {
     showPageThumbnails: true,
 
     // Enable/disable the documents thumbnail tab
-    showDocThumbnails: true,
+    showDocThumbnails: false,
 
     // Enable/disable the search tab
     showSearch: true,
@@ -129,7 +139,7 @@ vvConfig = {
         textString: "Text",
 
         fontFace: "Arial",
-        fontSize: 14,
+        fontSize: 48,
         fontBold: false, 
         fontItalic: false, 
         fontStrike: false,    // for future use
