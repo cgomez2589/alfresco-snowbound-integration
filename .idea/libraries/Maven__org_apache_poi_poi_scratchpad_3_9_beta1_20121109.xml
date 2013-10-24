@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.poi:poi-scratchpad:3.9-beta1-20121109">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-scratchpad/3.9-beta1-20121109/poi-scratchpad-3.9-beta1-20121109.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-scratchpad/3.9-beta1-20121109/poi-scratchpad-3.9-beta1-20121109-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-scratchpad/3.9-beta1-20121109/poi-scratchpad-3.9-beta1-20121109-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

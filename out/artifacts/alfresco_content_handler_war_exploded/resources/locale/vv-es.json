@@ -1,0 +1,288 @@
+{
+    "windowTitle": "VirtualViewer AJAX",
+    "utilityToolbar": {
+        "exportDocument": {
+            "alt": "Exportaci&#243;n De Documentos",
+            "title": "Exportaci&#243;n De Documentos"
+        },
+        "sendDocument": {
+            "alt": "Enviar El Documento",
+            "title": "Enviar El Documento"
+        },
+        "printDocument": {
+            "alt": "Imprimir El Documento",
+            "title": "Imprimir El Documento"
+        },
+        "separator": {
+            "alt": "",
+            "title": ""
+        },
+        "zoomIn": {
+            "alt": "Acercar",
+            "title": "Acercar"
+        },
+        "zoomOut": {
+            "alt": "Alejar",
+            "title": "Alejar"
+        },
+        "rubberbandZoom": {
+            "alt": "Caucho Zoom Banda",
+            "title": "Caucho Zoom Banda"
+        },
+        "fitToWindow": {
+            "alt": "Ajustar La Ventana",
+            "title": "Ajustar La Ventana"
+        },
+        "fitToHeight": {
+            "alt": "Ajustar La Altura",
+            "title": "Ajustar La Altura"
+        },
+        "fitToWidth": {
+            "alt": "Ajustar Ancho",
+            "title": "Ajustar Ancho"
+        },
+        "goToFirstPage": {
+            "alt": "Ir A La Primera P&#225;gina",
+            "title": "Ir A La Primera P&#225;gina"
+        },
+        "goToPreviousPage": {
+            "alt": "Ir A La P&#225;gina Anterior",
+            "title": "Ir A La P&#225;gina Anterior"
+        },
+        "goToNextPage": {
+            "alt": "Ir A La P&#225;gina Siguiente",
+            "title": "Ir A La P&#225;gina Siguiente"
+        },
+        "goToLastPage": {
+            "alt": "Ir A La &#218;ltima P&#225;gina",
+            "title": "Ir A La &#218;ltima P&#225;gina"
+        },
+        "rotateRight": {
+            "alt": "Girar A La Derecha",
+            "title": "Girar A La Derecha"
+        },
+        "rotateLeft": {
+            "alt": "Girar A La Izquierda",
+            "title": "Girar A La Izquierda"
+        },
+        "invertImage": {
+            "alt": "Invertir Imagen",
+            "title": "Invertir Imagen"
+        },
+        "saveDocument": {
+            "alt": "Guardar Documento",
+            "title": "Guardar Documento"
+        },
+        "showAboutDialog": {
+            "alt": "Sobre",
+            "title": "Sobre"
+        },
+        "toggleThumbnailPanel": {
+            "alt": "Pulgar De Palanca",
+            "title": "Pulgar De Palanca"
+        }
+    },
+    "annToolbar": {
+        "line": {
+            "alt": "L&#237;nea",
+            "title": "L&#237;nea"
+        },
+        "arrow": {
+            "alt": "Flecha",
+            "title": "Flecha"
+        },
+        "freehand": {
+            "alt": "Manos Libres",
+            "title": "Manos Libres"
+        },
+        "rectangle": {
+            "alt": "Rect&#225;ngulo",
+            "title": "Rect&#225;ngulo"
+        },
+        "filledRectangle": {
+            "alt": "Rect&#225;ngulo Relleno",
+            "title": "Rect&#225;ngulo Relleno"
+        },
+        "ellipse": {
+            "alt": "Elipse",
+            "title": "Elipse"
+        },
+        "filledEllipse": {
+            "alt": "Elipse Rellena",
+            "title": "Elipse Rellena"
+        },
+        "polygon": {
+            "alt": "Pol&#237;gono",
+            "title": "Pol&#237;gono"
+        },
+        "filledPolygon": {
+            "alt": "Pol&#237;gono Relleno",
+            "title": "Pol&#237;gono Relleno"
+        },
+        "highlightRectangle": {
+            "alt": "Destacar",
+            "title": "Destacar"
+        },
+        "stickyNote": {
+            "alt": "Sticky Note",
+            "title": "Sticky Note"
+        },
+        "textEdit": {
+            "alt": "Edici&#243;n De Texto",
+            "title": "Edici&#243;n De Texto"
+        },
+        "layerManager": {
+            "alt": "Gerente De La Capa De",
+            "title": "Gerente De La Capa De"
+        }
+    },
+    "layerManager": {
+        "activeLayer": {
+            "value": "Capa Activa"
+        },
+        "addLayer": {
+            "alt": "A&#241;adir Capa",
+            "title": "A&#241;adir Capa"
+        },
+        "deleteLayer": {
+            "alt": "Eliminar La Capa De.ALT",
+            "title": "Eliminar La Capa De.TITLE"
+        },
+        "renameLayer": {
+            "alt": "Cambiar El Nombre De Capa",
+            "title": "Cambiar El Nombre De Capa"
+        },
+        "redactLayer": {
+            "alt": "Redact Capa",
+            "title": "Redact Capa"
+        },
+        "layerVisibility": {
+            "value": "Capa De Visibilidad"
+        }
+    },
+    "exportDialog": {
+        "title": "Seleccione Formato De Salida",
+        "pdf": "Pdf",
+        "tiff": "Tiff",
+        "original": "Original",
+        "includeAnnotations": "Incluir Anotaciones",
+        "exportButton": "Exportar",
+        "cancelButton": "Cancelar"
+    },
+    "printDialog": {
+        "title": "Opciones De Impresi&#243;n",
+        "pages": "P&#225;ginas:",
+        "through": "A Trav&#233;s De",
+        "color": "Color",
+        "grayscale": "Escala De Grises",
+        "includeAnnotations": "Incluir Anotaciones",
+        "printButton": "Imprimir",
+        "cancelButton": "Cancelar"
+    },
+    "thumbContextMenu": {
+        "selectAll": "Seleccionar Todo",
+        "selectNone": "Seleccione Ninguno",
+        "cut": "Cortar",
+        "copy": "Copiar",
+        "delete": "Borrar",
+        "insertBefore": "Insertar Antes",
+        "insertAfter": "Insertar Despu&#233;s",
+        "newDocument": "Copiar En Un Documento Nuevo"
+    },
+    "textAnnContextMenu": {
+        "newTextAnn": "Anotaci&#243;n De Texto Nuevo"
+    },
+    "thumbnails": {
+        "pageTab": "P&#225;ginas",
+        "documentTab": "Docs"
+    },
+    "loadWaitDialog": "Por Favor Espera Mientras Se Carga El Documento",
+    "saveWaitDialog": {
+        "value": "Por Favor Espera Mientras El Documento Es El Ahorro"
+    },
+    "deleteAnnDialog": {
+        "title": "Eliminar El T&#237;tulo De Anotaci&#243;n",
+        "value": "Eliminar Contenido De Anotaci&#243;n",
+        "deleteButton": "Borrar",
+        "cancelButton": "Cancelar"
+    },
+    "newDocumentDialog": {
+        "title": "Crear Nuevo Documento",
+        "documentId": "Documento De Identidad",
+        "okButton": "Ok",
+        "cancelButton": "Cancelar",
+        "error": {
+            "value": "Por Favor, Escriba Un Identificador De Documento V&#225;lido"
+        }
+    },
+    "addLayerDialog": {
+        "layerName": "Nombre De Capa"
+    },
+    "deleteLayerDialog": {
+        "value": "&#191;Seguro Que Desea Borrar La Capa De"
+    },
+    "renameLayerDialog": {
+        "layerName": "Nombre De Capa"
+    },
+    "aboutDialog" : {
+        "productName": "VirtualViewer AJAX",
+        "versionPrefix": "V",
+        "okButton": "Ok",
+        "helpButton": "Ayuda",
+        "text": "&reg;1996-2013 ALL RIGHTS RESERVED.  (LICENSING INFORMATION). VIRTUALVIEWER AND THE VIRTUALVIEWER LOGO ARE TRADEMARKS OF THE SNOWBOUND SOFTWARE CORPORATION. ALL RIGHTS RESERVED. SOME OF THE TRADEMARKS USED UNDER LICENSE FROM PARTNER COMPANIES."
+    },
+    "annPopUp" : {
+        "editText" : {
+            "alt": "Editar Texto",
+            "title": "Editar Texto",
+            "value": "Editar Texto"
+        },
+        "lineColorGroupLabel" : {
+            "value": "Color Line:"
+        },
+        "borderColorGroupLabel" : {
+            "value": "Color Del Borde:"
+        },
+        "fillColorGroupLabel" : {
+            "value": "Color De Relleno:"
+        },
+        "fontColorGroupLabel" : {
+            "value": "Font Color:"
+        },
+        "colorGrid" : {
+            "more" : "M&#225;s Colores ...",
+            "custom" : "Personalizado:"
+        },
+        "lineSizeGroupLabel" : {
+            "value": "Tama&#241;o De La L&#237;nea:" 
+        },
+        "borderSizeGroupLabel" : {
+            "value": "Frontera Tama&#241;o:" 
+        },
+        "fontFaceLabel" : {
+            "value": "Fuente:"
+        },
+        "fontSizeLabel" : {
+            "value": "Tama&#241;o De Fuente:"
+        },
+        "bold" : "Bold",
+        "italic" : "Cursiva",
+        "deleteAnn" : {
+            "alt" : "Eliminar",
+            "title" : "Eliminar",
+            "value" : "Eliminar"
+        }
+    },
+    "errors": {
+        "deleteLayerPermission": "Usted No Tiene Permiso Para Eliminar Esta Capa.",
+        "renameLayerPermission": "Usted No Tiene Permiso Para Cambiar El Nombre De Esta Capa.",
+        "createAnnOnLayerPermission": "Usted No Tiene Permiso Para Crear Anotaciones En Esta Capa.",
+        "editAnnOnLayerPermission": "Usted No Tiene Permiso Para Editar Anotaciones En Esta Capa.",
+        "invalidLayerName": "Nombre De La Capa No Es V&#225;lido. Por Favor, Elija Un Nuevo Nombre De Capa:",
+        "layerNameAlreadyExists": "Una Capa Con Ese Nombre Ya Existe.",
+        "tabTooManyOpen": "Abrir Pesta&#241;as Demasiado.",
+        "tabIndexOutOfBounds": "Valor De La Ficha &#205;ndice No Es V&#225;lido.",
+        "tabCloseLastTab": "Cierre De La &#218;ltima Pesta&#241;a No Est&#225; Permitido.",
+        "invalidColorString": "El Valor De Color Introducido No Es V&#225;lido."
+    }
+}

@@ -18,17 +18,7 @@
 -->
 <!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
 <beans>
-    <bean id="webscript.org.alfresco.integrations.snowbound.AnnotationProperties.get"
-          class="org.alfresco.integrations.snowbound.webscripts.AnnotationProperties"
-          parent="webscript">
-        <property name="nodeService" ref="NodeService"/>
-    </bean>
-    <bean id="webscript.org.alfresco.integrations.snowbound.BookmarkContent.get"
-          class="org.alfresco.integrations.snowbound.webscripts.BookmarkContent"
-          parent="webscript">
-        <property name="serviceRegistry" ref="ServiceRegistry"/>
-    </bean>
-
     <import resource="classpath:alfresco/module/${artifactId}/snowbound-model-context.xml"/>
-
+    <import resource="classpath:alfresco/module/${artifactId}/snowbound-properties-context.xml"/>
+    <import resource="classpath:alfresco/module/${artifactId}/snowbound-webscript-context.xml"/>
 </beans>

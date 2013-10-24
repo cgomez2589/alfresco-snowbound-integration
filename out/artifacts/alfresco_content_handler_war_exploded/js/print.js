@@ -1,0 +1,1 @@
+$(document).ready(function(){parent.myFlexSnap.printDocumentCore(window);var A=$("img").length;var B=0;$("img").each(function(){var C=this;C.onload=function(){var E=$(C).width();var D=$(C).height();if(E>=D){$(C).width("100%")}else{if(BrowserDetect.browser==="Explorer"){$(C).height("90%")}else{$(C).height("100%")}}B+=1;if(B===A){window.focus();window.print()}}})});

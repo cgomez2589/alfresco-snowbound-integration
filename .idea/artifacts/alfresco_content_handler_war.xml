@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="alfresco-content-handler:war">
+    <output-path>$PROJECT_DIR$/alfresco-content-handler/target</output-path>
+    <root id="archive" name="alfresco-content-handler-1.0.war">
+      <element id="artifact" artifact-name="alfresco-content-handler:war exploded" />
+    </root>
+  </artifact>
+</component>

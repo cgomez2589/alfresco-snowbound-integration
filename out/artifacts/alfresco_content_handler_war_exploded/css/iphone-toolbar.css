@@ -1,0 +1,156 @@
+
+div#exportDocument {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+body[class="landscape"] div#sendDocumentAnn {
+    background: transparent url("../resources/40pixel/sendDocumentAnn.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+body[class="portrait"] div#sendDocumentAnn {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+div#print {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+div#zoom_in {
+    background: transparent url("../resources/40pixel/zoom_in.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#zoom_out {
+    background: transparent url("../resources/40pixel/zoom_out.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#rubber_band {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+div#fit_to_window {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+div#fit_to_height {
+    background: transparent url("../resources/40pixel/fit_to_height.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#fit_to_width {
+    background: transparent url("../resources/40pixel/fit_to_width.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#go_to_first {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+div#previous {
+    background: transparent url("../resources/40pixel/previous.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#next {
+    background: transparent url("../resources/40pixel/next.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#go_to_last {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+body[class="portrait"]  div#rotate_right {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+div#rotate_right {
+    background: transparent url("../resources/40pixel/rotate_right.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+body[class="portrait"]  div#rotate_left {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+body[class="landscape"]  div#rotate_left {
+    background: transparent url("../resources/40pixel/rotate_left.png") no-repeat top left;
+    
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+div#invert_image {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+body[class="portrait"] div.separator {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+
+body[class="landscape"] div.separator {
+    background-color: #DDDDDD;
+    
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    width: 2px;
+    height: 40px;
+    float: left;
+}
+
+div#saveDocument {
+    visibility: collapse;
+    width: 0px;
+    height: 0px;
+}
+

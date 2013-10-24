@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.pdfbox:pdfbox:1.7.0-alfresco-patched">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/1.7.0-alfresco-patched/pdfbox-1.7.0-alfresco-patched.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/1.7.0-alfresco-patched/pdfbox-1.7.0-alfresco-patched-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/1.7.0-alfresco-patched/pdfbox-1.7.0-alfresco-patched-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

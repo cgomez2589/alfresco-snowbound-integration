@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Save Snowbound Bookmark Content</shortname>
+	<description>Save Snowbound Bookmark Content</description>
+	<url>/integrations/snowbound/SaveBookmarkContent</url>
+	<authentication>user</authentication>
+    <format default="html"></format>
+    <family>Snowbound Integration</family>
+</webscript>

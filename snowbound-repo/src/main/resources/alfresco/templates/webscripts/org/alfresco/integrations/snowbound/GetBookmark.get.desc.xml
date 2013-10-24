@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Get Bookmark</shortname>
+	<description>Get Bookmark</description>
+	<url>/integrations/snowbound/GetBookmark?nodeRef={nodeRef}</url>
+	<authentication>user</authentication>
+    <format default="json"></format>
+    <family>Snowbound Integration</family>
+</webscript>

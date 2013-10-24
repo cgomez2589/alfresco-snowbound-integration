@@ -1,0 +1,482 @@
+/* Image Controls Toolbar */
+
+.toolbarSelected {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+
+    border: 1px solid #dfe0e1;
+}
+
+.toolbarUnselected {
+    border: 1px solid transparent;
+}
+
+div#exportDocument {
+    background: transparent url("../resources/exportDocument.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#exportDocument.mouseDown {
+    background: transparent url("../resources/exportDocument_down.png") no-repeat top left;
+}
+
+div#sendDocumentAnn {
+    background: transparent url("../resources/sendDocumentAnn.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#sendDocumentAnn.mouseDown {
+    background: transparent url("../resources/sendDocumentAnn_down.png") no-repeat top left;
+}
+
+div#print {
+    background: transparent url("../resources/print.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#print.mouseDown {
+    background: transparent url("../resources/print_down.png") no-repeat top left;
+}
+
+div#zoom_in {
+    background: transparent url("../resources/zoom_in.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#zoom_in.mouseDown {
+    background: transparent url("../resources/zoom_in_down.png") no-repeat top left;
+}
+
+div#zoom_out {
+    background: transparent url("../resources/zoom_out.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#zoom_out.mouseDown {
+    background: transparent url("../resources/zoom_out_down.png") no-repeat top left;
+}
+
+div#rubber_band {
+    background: transparent url("../resources/rubber_band.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#rubber_band.mouseDown {
+    background: transparent url("../resources/rubber_band_down.png") no-repeat top left;
+}
+
+div#fit_to_window {
+    background: transparent url("../resources/fit_to_window.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#fit_to_window.mouseDown {
+    background: transparent url("../resources/fit_to_window_down.png") no-repeat top left;
+}
+
+div#fit_to_height {
+    background: transparent url("../resources/fit_to_height.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#fit_to_height.mouseDown {
+    background: transparent url("../resources/fit_to_height_down.png") no-repeat top left;
+}
+
+div#fit_to_width {
+    background: transparent url("../resources/fit_to_width.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#fit_to_width.mouseDown {
+    background: transparent url("../resources/fit_to_width_down.png") no-repeat top left;
+}
+
+div#go_to_first {
+    background: transparent url("../resources/go_to_first.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#go_to_first.mouseDown {
+    background: transparent url("../resources/go_to_first_down.png") no-repeat top left;
+}
+
+div#previous {
+    background: transparent url("../resources/previous.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#previous.mouseDown {
+    background: transparent url("../resources/previous_down.png") no-repeat top left;
+}
+
+input#vvJumpToPageInput {
+    float: left;
+
+	border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+           
+}
+
+div#vvJumpToPageLabel {
+    float: left;
+    width: 35px;
+
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+span#vvJumpToPageTotal {
+}
+
+div#next {
+    background: transparent url("../resources/next.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#next.mouseDown {
+    background: transparent url("../resources/next_down.png") no-repeat top left;
+}
+
+div#go_to_last {
+    background: transparent url("../resources/go_to_last.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#go_to_last.mouseDown {
+    background: transparent url("../resources/go_to_last_down.png") no-repeat top left;
+}
+
+div#rotate_right {
+    background: transparent url("../resources/rotate_right.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#rotate_right.mouseDown {
+    background: transparent url("../resources/rotate_right_down.png") no-repeat top left;
+}
+
+div#rotate_left {
+    background: transparent url("../resources/rotate_left.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#rotate_left.mouseDown {
+    background: transparent url("../resources/rotate_left_down.png") no-repeat top left;
+}
+
+div#invert_image {
+    background: transparent url("../resources/invert_image.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#invert_image.mouseDown {
+    background: transparent url("../resources/invert_image_down.png") no-repeat top left;
+}
+
+div.separator {
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#saveDocument {
+    background: transparent url("../resources/saveDocument.png") no-repeat top left;
+    
+    margin-left: 40px;
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#saveDocument.mouseDown {
+    background: transparent url("../resources/saveDocument_down.png") no-repeat top left;
+}
+
+div#about {
+    background: transparent url("../resources/about.png") no-repeat top left;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+    padding-right: 5px;
+}
+
+div#about.mouseDown {
+    background: transparent url("../resources/about_down.png") no-repeat top left;
+}
+
+div#thumbToggle {
+    background: transparent url("../resources/thumbToggle.png") no-repeat top left;
+    
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 40px;
+    
+    padding-right: 5px;
+}
+
+div#thumbToggle.mouseDown {
+    background: transparent url("../resources/thumbToggle_down.png") no-repeat top left;
+}
+
+
+/* Annotation Toolbar */
+
+
+div#annLine {
+    background: transparent url("../resources/annLine.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annLine.mouseDown {
+    background: transparent url("../resources/annLine_down.png") no-repeat top left;
+}
+
+div#annArrow {
+    background: transparent url("../resources/annArrow.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annArrow.mouseDown {
+    background: transparent url("../resources/annArrow_down.png") no-repeat top left;
+}
+
+div#annFreehand {
+    background: transparent url("../resources/annFreehand.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annFreehand.mouseDown {
+    background: transparent url("../resources/annFreehand_down.png") no-repeat top left;
+}
+
+div#annRect {
+    background: transparent url("../resources/annRect.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annRect.mouseDown {
+    background: transparent url("../resources/annRect_down.png") no-repeat top left;
+}
+
+div#annFilledRect {
+    background: transparent url("../resources/annFilledRect.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annFilledRect.mouseDown {
+    background: transparent url("../resources/annFilledRect_down.png") no-repeat top left;
+}
+
+div#annEllipse {
+    background: transparent url("../resources/annEllipse.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annEllipse.mouseDown {
+    background: transparent url("../resources/annEllipse_down.png") no-repeat top left;
+}
+
+div#annFilledEllipse {
+    background: transparent url("../resources/annFilledEllipse.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annFilledEllipse.mouseDown {
+    background: transparent url("../resources/annFilledEllipse_down.png") no-repeat top left;
+}
+
+div#annPolygon {
+    background: transparent url("../resources/annPolygon.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annPolygon.mouseDown {
+    background: transparent url("../resources/annPolygon_down.png") no-repeat top left;
+}
+
+div#annFilledPolygon {
+    background: transparent url("../resources/annFilledPolygon.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annFilledPolygon.mouseDown {
+    background: transparent url("../resources/annFilledPolygon_down.png") no-repeat top left;
+}
+
+div#annHighlightRect {
+    background: transparent url("../resources/annHighlightRect.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annHighlightRect.mouseDown {
+    background: transparent url("../resources/annHighlightRect_down.png") no-repeat top left;
+}
+
+div#annStickyNote {
+    background: transparent url("../resources/annStickyNote.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annStickyNote.mouseDown {
+    background: transparent url("../resources/annStickyNote_down.png") no-repeat top left;
+}
+
+div#annTextEdit {
+    background: transparent url("../resources/annTextEdit.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#annTextEdit.mouseDown {
+    background: transparent url("../resources/annTextEdit_down.png") no-repeat top left;
+}
+
+div#layerMgr {
+    background: transparent url("../resources/layerMgr.png") no-repeat top left;
+    border: 1px solid transparent;
+    
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+div#layerMgr.mouseDown {
+    background: transparent url("../resources/layerMgr_down.png") no-repeat top left;
+}
+

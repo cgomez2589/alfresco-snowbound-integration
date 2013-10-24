@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one or more
+	contributor license agreements.  See the NOTICE file distributed with
+	this work for additional information regarding copyright ownership.
+	The ASF licenses this file to You under the Apache License, Version 2.0
+	(the "License"); you may not use this file except in compliance with
+	the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+	
+-->
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+    <bean id="webscript.org.alfresco.integrations.snowbound.SaveDocumentContent.post"
+          class="org.alfresco.integrations.snowbound.webscripts.SaveDocumentContent"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.SaveAnnotationContent.post"
+          class="org.alfresco.integrations.snowbound.webscripts.SaveAnnotationContent"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.SaveBookmarkContent.post"
+          class="org.alfresco.integrations.snowbound.webscripts.SaveBookmarkContent"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.SavePreferenceXMLContent.post"
+          class="org.alfresco.integrations.snowbound.webscripts.SavePreferenceXMLContent"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.DeleteAnnotation.post"
+          class="org.alfresco.integrations.snowbound.webscripts.DeleteAnnotation"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.GetBookmark.get"
+          class="org.alfresco.integrations.snowbound.webscripts.GetBookmark"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.GetPreferenceXML.get"
+          class="org.alfresco.integrations.snowbound.webscripts.GetPreferenceXML"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.GetAnnotations.get"
+          class="org.alfresco.integrations.snowbound.webscripts.GetAnnotations"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+
+    <bean id="webscript.org.alfresco.integrations.snowbound.GetDocument.get"
+          class="org.alfresco.integrations.snowbound.webscripts.GetDocument"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+    </bean>
+</beans>

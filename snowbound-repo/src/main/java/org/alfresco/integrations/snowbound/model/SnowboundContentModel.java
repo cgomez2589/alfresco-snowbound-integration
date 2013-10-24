@@ -19,7 +19,10 @@ public interface SnowboundContentModel {
     public static final QName ASPECT_ANNOTABLE = QName.createQName(SNOWBOUND_URI, "annotable");
     public static final QName ASSOC_ANNOTATION = QName.createQName(SNOWBOUND_URI, "annotationAssoc");
 
-    public static final QName ASPECT_BOOKMARKABLE = QName.createQName(SNOWBOUND_URI, "bookmarkable");
+    public static final QName TYPE_BOOKMARK = QName.createQName(SNOWBOUND_URI, "bookmark");
     public static final QName ASSOC_BOOKMARK= QName.createQName(SNOWBOUND_URI, "bookmarkAssoc");
+
+    public static final QName TYPE_PREFERENCE = QName.createQName(SNOWBOUND_URI, "prefernce");
+    public static final QName ASSOC_PREFERENCE = QName.createQName(SNOWBOUND_URI, "prefernceAssoc");
 
 }

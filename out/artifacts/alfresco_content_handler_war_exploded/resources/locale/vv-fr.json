@@ -1,0 +1,288 @@
+{
+    "windowTitle": "VirtualViewer AJAX",
+    "utilityToolbar": {
+        "exportDocument": {
+            "alt": "Exporter Le Document",
+            "title": "Exporter Le Document"
+        },
+        "sendDocument": {
+            "alt": "Envoyer Le Document",
+            "title": "Envoyer Le Document"
+        },
+        "printDocument": {
+            "alt": "Imprimer Le Document",
+            "title": "Imprimer Le Document"
+        },
+        "separator": {
+            "alt": "",
+            "title": ""
+        },
+        "zoomIn": {
+            "alt": "Zoom Avant",
+            "title": "Zoom Avant"
+        },
+        "zoomOut": {
+            "alt": "Zoom Arri&#232;re",
+            "title": "Zoom Arri&#232;re"
+        },
+        "rubberbandZoom": {
+            "alt": "Zoom &#201;lastique",
+            "title": "Zoom &#201;lastique"
+        },
+        "fitToWindow": {
+            "alt": "Ajuster La Fen&#234;tre",
+            "title": "Ajuster La Fen&#234;tre"
+        },
+        "fitToHeight": {
+            "alt": "Adapter &#192; La Hauteur",
+            "title": "Adapter &#192; La Hauteur"
+        },
+        "fitToWidth": {
+            "alt": "Ajuster &#192; La Largeur",
+            "title": "Ajuster &#192; La Largeur"
+        },
+        "goToFirstPage": {
+            "alt": "Aller &#192; La Premi&#232;re Page",
+            "title": "Aller &#192; La Premi&#232;re Page"
+        },
+        "goToPreviousPage": {
+            "alt": "Aller &#192; La Page Pr&#233;c&#233;dente",
+            "title": "Aller &#192; La Page Pr&#233;c&#233;dente"
+        },
+        "goToNextPage": {
+            "alt": "Aller &#192; La Page Suivante",
+            "title": "Aller &#192; La Page Suivante"
+        },
+        "goToLastPage": {
+            "alt": "Aller &#192; La Premi&#232;re Page",
+            "title": "Aller &#192; La Premi&#232;re Page"
+        },
+        "rotateRight": {
+            "alt": "Rotation D'Un Droite",
+            "title": "Rotation D'Un Droite"
+        },
+        "rotateLeft": {
+            "alt": "Rotation D'Un Gauche",
+            "title": "Rotation D'Un Gauche"
+        },
+        "invertImage": {
+            "alt": "Inverser L'Image",
+            "title": "Inverser L'Image"
+        },
+        "saveDocument": {
+            "alt": "Sauvegarder Le Document Le",
+            "title": "Sauvegarder Le Document Le"
+        },
+        "showAboutDialog": {
+            "alt": "A Propos",
+            "title": "A Propos"
+        },
+        "toggleThumbnailPanel": {
+            "alt": "Pouce Toggle",
+            "title": "Pouce Toggle"
+        }
+    },
+    "annToolbar": {
+        "line": {
+            "alt": "Ligne",
+            "title": "Ligne"
+        },
+        "arrow": {
+            "alt": "Fl&#232;che",
+            "title": "Fl&#232;che"
+        },
+        "freehand": {
+            "alt": "Libre Principal",
+            "title": "Libre Principal"
+        },
+        "rectangle": {
+            "alt": "Rectangle",
+            "title": "Rectangle"
+        },
+        "filledRectangle": {
+            "alt": "Rectangle Plein",
+            "title": "Rectangle Plein"
+        },
+        "ellipse": {
+            "alt": "Ellipse",
+            "title": "Ellipse"
+        },
+        "filledEllipse": {
+            "alt": "Ellipse Pleine",
+            "title": "Ellipse Pleine"
+        },
+        "polygon": {
+            "alt": "Polygone",
+            "title": "Polygone"
+        },
+        "filledPolygon": {
+            "alt": "Polygone Plein",
+            "title": "Polygone Plein"
+        },
+        "highlightRectangle": {
+            "alt": "Mettez En Surbrillance",
+            "title": "Mettez En Surbrillance"
+        },
+        "stickyNote": {
+            "alt": "Sticky Note",
+            "title": "Sticky Note"
+        },
+        "textEdit": {
+            "alt": "Texte Editer",
+            "title": "Texte Editer"
+        },
+        "layerManager": {
+            "alt": "Gestions Couches Des",
+            "title": "Gestions Couches Des"
+        }
+    },
+    "layerManager": {
+        "activeLayer": {
+            "value": "Couche Active"
+        },
+        "addLayer": {
+            "alt": "Ajouter Une Couche",
+            "title": "Ajouter Une Couche"
+        },
+        "deleteLayer": {
+            "alt": "Supprimer La Couche.ALT",
+            "title": "Supprimer La Couche.TITLE"
+        },
+        "renameLayer": {
+            "alt": "Renommer La Couche",
+            "title": "Renommer La Couche"
+        },
+        "redactLayer": {
+            "alt": "Biffer La Couche",
+            "title": "Biffer La Couche"
+        },
+        "layerVisibility": {
+            "value": "Visibilit&#233; Couches Des"
+        }
+    },
+    "exportDialog": {
+        "title": "S&#233;lectionnez Format De Sortie",
+        "pdf": "Pdf",
+        "tiff": "Tiff",
+        "original": "Original",
+        "includeAnnotations": "Inclure Annotation",
+        "exportButton": "Exporter",
+        "cancelButton": "Annuler"
+    },
+    "printDialog": {
+        "title": "Options D'Impression",
+        "pages": "Pages:",
+        "through": "&#192; Travers",
+        "color": "Couleur",
+        "grayscale": "Echelle De Gris",
+        "includeAnnotations": "Inclure Annotation",
+        "printButton": "Imprimer",
+        "cancelButton": "Annuler"
+    },
+    "thumbContextMenu": {
+        "selectAll": "S&#233;lectionner Tout",
+        "selectNone": "Selectionner Aucun",
+        "cut": "Couper",
+        "copy": "Copier",
+        "delete": "Effacer",
+        "insertBefore": "Ins&#233;rer Avant",
+        "insertAfter": "Ins&#233;rer Apr&#232;s",
+        "newDocument": "Copier Vers Un Nouveau Document"
+    },
+    "textAnnContextMenu": {
+        "newTextAnn": "Annotation Nouvelle"
+    },
+    "thumbnails": {
+        "pageTab": "Pages",
+        "documentTab": "Docs"
+    },
+    "loadWaitDialog": "T&#233;l&#233;chargement En Cours",
+    "saveWaitDialog": {
+        "value": "Sauvegarde En Cours"
+    },
+    "deleteAnnDialog": {
+        "title": "Supprimer Titre Annotation",
+        "value": "Supprimer Contenu Annotation",
+        "deleteButton": "Effacer",
+        "cancelButton": "Annuler"
+    },
+    "newDocumentDialog": {
+        "title": "Cr&#233;er Un Nouveau Document",
+        "documentId": "Identit&#233; Du Document",
+        "okButton": "Ok",
+        "cancelButton": "Annuler",
+        "error": {
+            "value": "Entrez L'Identit&#233; Correcte Du Document!"
+        }
+    },
+    "addLayerDialog": {
+        "layerName": "Nom De La Couche"
+    },
+    "deleteLayerDialog": {
+        "value": "&#202;tes-Vous S&#251;r De Vouloir Supprimer La Couche"
+    },
+    "renameLayerDialog": {
+        "layerName": "Nom Du Calque"
+    },
+    "aboutDialog" : {
+        "productName": "VirtualViewer AJAX",
+        "versionPrefix": "V",
+        "okButton": "Ok",
+        "helpButton": "Aide",
+        "text": "&reg;1996-2013 ALL RIGHTS RESERVED.  (LICENSING INFORMATION). VIRTUALVIEWER AND THE VIRTUALVIEWER LOGO ARE TRADEMARKS OF THE SNOWBOUND SOFTWARE CORPORATION. ALL RIGHTS RESERVED. SOME OF THE TRADEMARKS USED UNDER LICENSE FROM PARTNER COMPANIES."
+    },
+    "annPopUp" : {
+        "editText" : {
+            "alt": "Modifier Le Texte",
+            "title": "Modifier Le Texte",
+            "value": "Modifier Le Texte"
+        },
+        "lineColorGroupLabel" : {
+            "value": "Color Line:"
+        },
+        "borderColorGroupLabel" : {
+            "value": "Border Color:"
+        },
+        "fillColorGroupLabel" : {
+            "value": "Couleur De Remplissage:"
+        },
+        "fontColorGroupLabel" : {
+            "value": "Couleur De Police:"
+        },
+        "colorGrid" : {
+            "more" : "Plus Couleurs ...",
+            "custom" : "Custom:"
+        },
+        "lineSizeGroupLabel" : {
+            "value": "Taille De La Ligne:" 
+        },
+        "borderSizeGroupLabel" : {
+            "value": "Taille De La Bordure:" 
+        },
+        "fontFaceLabel" : {
+            "value": "Font:"
+        },
+        "fontSizeLabel" : {
+            "value": "Taille De La Police:"
+        },
+        "bold" : "Bold",
+        "italic" : "Italique",
+        "deleteAnn" : {
+            "alt" : "Supprimer",
+            "title" : "Supprimer",
+            "value" : "Supprimer"
+        }
+    },
+    "errors": {
+        "deleteLayerPermission": "Vous N'Avez Pas La Permission De Supprimer This Couche.",
+        "renameLayerPermission": "Vous N'Avez Pas La Permission De Renommer This Couche.",
+        "createAnnOnLayerPermission": "Vous N'Avez Pas La Permission De Cr&#233;er Des Annotation Sur Cette Couche.",
+        "editAnnOnLayerPermission": "Vous N'Avez Pas La Permission De Modificateur Les Annotation Sur This Couche.",
+        "invalidLayerName": "Nom De La Couche Invalide. Choisir Un Nouveau Nom De Couche:",
+        "layerNameAlreadyExists": "Une Couche De Ce Nom Existe D&#233;j&#224;.",
+        "tabTooManyOpen": "Trop D'Ouverts Onglets.",
+        "tabIndexOutOfBounds": "Valeurs De L'Onglet Incorrectes",
+        "tabCloseLastTab": "Fermeture Du Bernier Onglet N'Est Pas Authorized.",
+        "invalidColorString": "Donnees Couleur Incorrectes"
+    }
+}

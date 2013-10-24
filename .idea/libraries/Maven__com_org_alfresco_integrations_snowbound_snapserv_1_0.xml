@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Maven: com.org.alfresco.integrations.snowbound:snapserv:1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/alfresco-content-handler/web/WEB-INF/lib/Snow.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.artofsolving:jodconverter:2.1.0-alfresco-patched">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/artofsolving/jodconverter/2.1.0-alfresco-patched/jodconverter-2.1.0-alfresco-patched.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/artofsolving/jodconverter/2.1.0-alfresco-patched/jodconverter-2.1.0-alfresco-patched-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/artofsolving/jodconverter/2.1.0-alfresco-patched/jodconverter-2.1.0-alfresco-patched-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

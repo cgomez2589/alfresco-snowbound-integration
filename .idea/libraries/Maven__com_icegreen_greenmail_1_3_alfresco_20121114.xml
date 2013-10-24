@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.icegreen:greenmail:1.3-alfresco-20121114">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/icegreen/greenmail/1.3-alfresco-20121114/greenmail-1.3-alfresco-20121114.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/icegreen/greenmail/1.3-alfresco-20121114/greenmail-1.3-alfresco-20121114-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/icegreen/greenmail/1.3-alfresco-20121114/greenmail-1.3-alfresco-20121114-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

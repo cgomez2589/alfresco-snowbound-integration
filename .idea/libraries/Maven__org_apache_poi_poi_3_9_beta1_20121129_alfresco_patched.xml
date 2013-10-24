@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.poi:poi:3.9-beta1-20121129-alfresco-patched">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9-beta1-20121129-alfresco-patched/poi-3.9-beta1-20121129-alfresco-patched.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9-beta1-20121129-alfresco-patched/poi-3.9-beta1-20121129-alfresco-patched-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9-beta1-20121129-alfresco-patched/poi-3.9-beta1-20121129-alfresco-patched-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

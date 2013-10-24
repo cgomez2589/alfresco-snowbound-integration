@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.chemistry:chemistry-abdera:0.1-incubating-unreleased">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/chemistry/chemistry-abdera/0.1-incubating-unreleased/chemistry-abdera-0.1-incubating-unreleased.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/chemistry/chemistry-abdera/0.1-incubating-unreleased/chemistry-abdera-0.1-incubating-unreleased-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/chemistry/chemistry-abdera/0.1-incubating-unreleased/chemistry-abdera-0.1-incubating-unreleased-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
