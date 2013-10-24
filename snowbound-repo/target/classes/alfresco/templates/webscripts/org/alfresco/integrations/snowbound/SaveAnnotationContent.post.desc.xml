@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Save Snowbound Annotation Content</shortname>
+	<description>Save Snowbound Annotation Content</description>
+	<url>/integrations/snowbound/SaveAnnotationContent</url>
+	<authentication>user</authentication>
+    <format default="html"></format>
+    <family>Snowbound Integration</family>
+</webscript>
