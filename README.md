@@ -15,12 +15,15 @@ Share presentation layer that contains configuration for the Snowbound VirtualVi
 1. Checkout snowbound-repo, snowbound-share, and alfresco-content-handler from GitHub.
 2. Change directory to snowbound-repo and snowbound-share separately.
 3. Run the following Maven commands for each project:
+
 ```bash
-mvn clean
+$ mvn clean
 ```
+
 ```bash
-mvn package
+$ mvn package
 ```
+
 4. Copy the snowbound-repo-*.amp to the <ALF_ROOT>/amps directory.
 5. Copy the snowbound-share-*.amp to the <ALF_ROOT>/amps_share directory.
 6. Make sure you Alfresco intance is stopped.
