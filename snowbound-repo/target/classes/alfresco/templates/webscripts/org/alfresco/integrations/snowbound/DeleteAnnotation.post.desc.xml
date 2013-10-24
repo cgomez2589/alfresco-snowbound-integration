@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Delete Snowbound Annotation</shortname>
+	<description>Delete Snowbound Annotation</description>
+	<url>/integrations/snowbound/DeleteAnnotation</url>
+	<authentication>user</authentication>
+    <format default="html"></format>
+    <family>Snowbound Integration</family>
+</webscript>

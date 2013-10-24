@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Get Snowbound Annotations</shortname>
+	<description>Get Snowbound Annotations</description>
+	<url>/integrations/snowbound/GetAnnotations?nodeRef={nodeRef}</url>
+	<authentication>user</authentication>
+    <format default="json"></format>
+    <family>Snowbound Integration</family>
+</webscript>
