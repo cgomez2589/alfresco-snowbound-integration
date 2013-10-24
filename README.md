@@ -29,17 +29,20 @@ $ mvn package
 6. Make sure you Alfresco intance is stopped.
 7. Change directory to the <ALF_ROOT>/bin directory.
 8. Run the following command:
+
 ```bash
-./apply_amps -verbose
+$ ./apply_amps -verbose
 ```
+
 9. Review the output and confirm that the Snowbound VirtualViewer Integration module was applied successfully.
 10. Download the VirtualViewer - HTML5 Java version from: http://register.snowbound.com/VirtualViewer_eval.html
 11. Copy the VirtualViewerJavaHTML5.war to the <ALF_ROOT>/tomcat/webapps directory.
 12. Change directory to the alfresco-content-handler directory.
 13. Confirm that the vv.deploy variable in the build.properties is pointing to the correct location in which the VirtualViewerJavaHTML5.war file resides.
 14. Run the following command:
+
 ```bash
-ant install
+$ ant install
 ```
 15. Start the tomcat instance
 16. Upload a PDF, navigate to the document-details view, and confirm that the Snowbound VirtualViewer renders the PDF as opposed to the Alfresco flash web-preview.
