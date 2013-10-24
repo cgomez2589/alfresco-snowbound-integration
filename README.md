@@ -1,4 +1,6 @@
-This provide an integration between the Alfresco Share collaboration UI and the Snowbound VirtualViewer
+This provide an integration between the Alfresco Share collaboration UI and the Snowbound VirtualViewer.
+http://www.alfresco.com/
+http://www.snowbound.com/
 
 # alfresco-content-handler
 Snowbound Content Handler java class that integration with Alfresco's Web Scripts (RESTful services)
@@ -72,3 +74,17 @@ To add additional MIME types refer to the web-preview.get.config.xml file in the
 * Integrate VirtualViewer permissions with Alfresco permissions via Web Scripts.
 * Create new doclib view to render all documents in a given folder as separate tabs (pagination necessary).
 * Create a multi-select option to open multiple documents in a new Share UI page.
+
+# Disclaimer
+Use the alfresco-snowbound-integration project at your own risk. The alfresco-snowbound-integration is not officially supported by Alfresco and is an open source, community-driven project. 
+
+# License
+Copyright (C) 2013 Alfresco Software Limited
+
+This file is part of an unsupported extension to Alfresco.
+
+Alfresco Software Limited licenses this file to you under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
