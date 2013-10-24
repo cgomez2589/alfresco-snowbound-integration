@@ -46,3 +46,20 @@ $ ant install
 * Start the tomcat instance
 * Upload a PDF, navigate to the document-details view, and confirm that the Snowbound VirtualViewer renders the PDF as opposed to the Alfresco flash web-preview.
 
+
+# Mime Type Current Configured
+* application/pdf
+* image/tiff
+* image/bmp
+* image/gif
+* image/jpeg
+* application/msword
+* application/vnd.openxmlformats-officedocument.wordprocessingml.document
+* application/vnd.ms-excel
+* application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+* application/vnd.ms-powerpoint
+* application/vnd.openxmlformats-officedocument.presentationml.presentation
+* application/vnd.ms-outlook
+* image/vnd.dwg
+
+For the full list of supported file types, refer to Appendix D in the VirtualViewer documentation: http://www.virtualviewer.com/VirtualViewerJavaAJAXHelp/virtualviewer.htm
