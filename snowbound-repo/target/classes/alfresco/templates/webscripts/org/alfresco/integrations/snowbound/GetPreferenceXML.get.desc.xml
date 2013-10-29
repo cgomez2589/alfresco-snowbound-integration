@@ -1,8 +1,0 @@
-<webscript>
-	<shortname>Get Preference XML</shortname>
-	<description>Get Preference XML</description>
-	<url>/integrations/snowbound/GetPreferenceXML?nodeRef={nodeRef}</url>
-	<authentication>user</authentication>
-    <format default="json"></format>
-    <family>Snowbound Integration</family>
-</webscript>

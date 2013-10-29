@@ -1,8 +1,0 @@
-<webscript>
-	<shortname>Save Snowbound Preference XML Content</shortname>
-	<description>Save Snowbound Preference XML Content</description>
-	<url>/integrations/snowbound/SavePreferenceXMLContent</url>
-	<authentication>user</authentication>
-    <format default="html"></format>
-    <family>Snowbound Integration</family>
-</webscript>

@@ -36,13 +36,9 @@ public class SaveAnnotationContent  extends AbstractWebScript {
     private NodeService nodeService;
     private NodeRef documentNodeRef = null;
 
-    public SaveAnnotationContent() {
-        nodeService = serviceRegistry.getNodeService();
-    }
-
     public void execute(WebScriptRequest request, WebScriptResponse response) throws IOException {
         try{
-            NodeService nodeService = serviceRegistry.getNodeService();
+            nodeService = serviceRegistry.getNodeService();
 
             Annotation annotation = new Gson().fromJson(request.getContent().getContent(), Annotation.class);
 
@@ -131,5 +127,9 @@ public class SaveAnnotationContent  extends AbstractWebScript {
 
     private void addAnnotableAspect(){
         nodeService.addAspect(documentNodeRef, SnowboundContentModel.ASPECT_ANNOTABLE, null);
+    }
+
+    public void setServiceRegistry(ServiceRegistry serviceRegistry) {
+        this.serviceRegistry = serviceRegistry;
     }
 }

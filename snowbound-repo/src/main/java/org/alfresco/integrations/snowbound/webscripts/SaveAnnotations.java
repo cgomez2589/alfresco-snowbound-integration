@@ -36,12 +36,10 @@ public class SaveAnnotations extends AbstractWebScript {
     private NodeService nodeService;
     private NodeRef documentNodeRef = null;
 
-    public SaveAnnotations(){
-        nodeService = serviceRegistry.getNodeService();
-    }
-
     public void execute(WebScriptRequest request, WebScriptResponse response) throws IOException {
         try{
+            nodeService = serviceRegistry.getNodeService();
+
             Annotation annotation = new Gson().fromJson(request.getContent().getContent(), Annotation.class);
 
             if(annotation != null){

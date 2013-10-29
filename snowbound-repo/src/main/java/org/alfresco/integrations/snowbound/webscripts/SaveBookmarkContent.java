@@ -36,12 +36,10 @@ public class SaveBookmarkContent extends AbstractWebScript {
     private NodeService nodeService;
     private NodeRef documentNodeRef = null;
 
-    public SaveBookmarkContent(){
-        nodeService = serviceRegistry.getNodeService();
-    }
-
     public void execute(WebScriptRequest request, WebScriptResponse response) throws IOException {
         try{
+            nodeService = serviceRegistry.getNodeService();
+
             Bookmark bookmark = new Gson().fromJson(request.getContent().getContent(), Bookmark.class);
 
             if(!nodeService.hasAspect(documentNodeRef, SnowboundContentModel.ASPECT_ANNOTABLE)){

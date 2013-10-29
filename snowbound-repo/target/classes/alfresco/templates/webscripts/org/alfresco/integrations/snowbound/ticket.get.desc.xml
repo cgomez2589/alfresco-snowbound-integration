@@ -1,8 +1,0 @@
-<webscript>
-	<shortname>Get Snowbound Alfresco Ticket</shortname>
-	<description>Get Snowbound Alfresco Ticket</description>
-	<url>/org/alfresco/integrations/snowbound/ticket</url>
-	<authentication>user</authentication>
-    <format default="html"></format>
-    <family>Snowbound Integration</family>
-</webscript>
