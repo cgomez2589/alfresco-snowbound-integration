@@ -49,7 +49,7 @@ $ mvn clean
 ```bash
 $ mvn package
 ```
-* Copy the alfresco-content-handler.jar file to the WEB-INF/lib directory
+* Copy the alfresco-content-handler.jar file to the VirtualViewerJavaHTML5/WEB-INF/lib directory
 * In the WEB-INF/web.xml file set the contentHandlerClass param-value to "org.alfresco.integrations.snowbound.RestContentHandler"
 
 ```bash
