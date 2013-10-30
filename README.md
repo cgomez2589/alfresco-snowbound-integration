@@ -1,4 +1,4 @@
-This provide an integration between the Alfresco Share collaboration UI and the Snowbound VirtualViewer.
+This project provides an integration between the Alfresco Share collaboration UI and the Snowbound VirtualViewer.
 http://www.alfresco.com/
 http://www.snowbound.com/
 
