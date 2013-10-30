@@ -174,7 +174,11 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             logger.log(Logger.FINEST, "Retrieved Annotation: " + annotation.getName() + " with NodeRef: " + annotation.getId());
 
             properties.put(AnnotationLayer.PROPERTIES_KEY_PERMISSION_LEVEL, annotation.getPermissionLevel());
-            properties.put(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG, annotation.getRedactionFlag());
+            logger.log(Logger.FINEST, "Annotation Permission Level: " + properties.get(AnnotationLayer.PROPERTIES_KEY_PERMISSION_LEVEL));
+
+            properties.put(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG, new Boolean(annotation.getRedactionFlag()));
+            logger.log(Logger.FINEST, "Annotation Redaction Flag: " + properties.get(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG));
+
 
             contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_PROPERTIES, properties);
         }
@@ -345,25 +349,24 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                     Boolean tmpRedactionFlag = (Boolean) annProperties.get(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG);
                     logger.log(Logger.FINEST, " Annotation Redaction Flag: " + tmpRedactionFlag);
 
+                    // TODO: this always returns null for some reason. Debug at a later date.
                     Integer tmpPermissionLevel = (Integer) annProperties.get(AnnotationLayer.PROPERTIES_KEY_PERMISSION_LEVEL);
                     logger.log(Logger.FINEST, " Annotation Permission Level: " + tmpPermissionLevel);
 
                     boolean redactionFlag = false;
-                    int permissionLevel = PERM_VIEW.intValue();
+                    //int permissionLevel = PERM_VIEW.intValue();
 
                     if (tmpRedactionFlag != null){
                         redactionFlag = tmpRedactionFlag.booleanValue();
                         annotation.setRedactionFlag(redactionFlag);
                     }
-
-                    annotation.setPermissionLevel(PERM_DELETE.intValue());
-                    if (permissionLevel <= PERM_REDACTION.intValue()){
-                        annotationLayer += "-redactionBurn";
+                    if (redactionFlag == true){
                         annotation.setPermissionLevel(PERM_REDACTION.intValue());
                     }
-                    else if (redactionFlag == true){
-                        annotationLayer += "-redactionEdit";
+                    else{
+                        annotation.setPermissionLevel(PERM_DELETE.intValue());
                     }
+
                     annotation.setContent(annotationContent);
                     annotation.setName(annotationLayer);
                     annotation.setParentNodeRef(nodeRef.replace("workspace/", "workspace://"));
@@ -384,7 +387,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                     GenericUrl saveAnnotationContentUrl = new GenericUrl(
                             this.alfrescoBaseUrl + "/service/integrations/snowbound/SaveAnnotationContent?alf_ticket=" + authenticationTicket);
                     postJsonHttpRequest(saveAnnotationContentUrl, jsonString.getBytes());
-
                     logger.log(Logger.FINEST, "  saveAnnotationContent, Saving layer: " + annotationLayer);
                 }
             }
@@ -430,8 +432,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
 
             GenericUrl saveBookmarkContentUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/SaveBookmarkContent?alf_ticket=" + authenticationTicket);
-            logger.log(Logger.FINEST, " Using url: " + saveBookmarkContentUrl);
-
             postJsonHttpRequest(saveBookmarkContentUrl, jsonString.getBytes());
 
             contentHandlerResult.put(ContentHandlerResult.DOCUMENT_ID_TO_RELOAD, documentID);
@@ -457,14 +457,11 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             Annotation annotation = annotationHashMap.get(annotationName);
 
             String jsonString = new Gson().toJson(annotation);
-            logger.log(Logger.FINEST, "Bookmark Json String: " + jsonString);
+            logger.log(Logger.FINEST, "Delete annotation Json String: " + jsonString);
 
             GenericUrl deleteAnnotationUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/DeleteAnnotation?alf_ticket=" + authenticationTicket);
-            logger.log(Logger.FINEST, " Using url: " + deleteAnnotationUrl);
-
             postJsonHttpRequest(deleteAnnotationUrl, jsonString.getBytes());
-
         }
         catch (Throwable e){
             logger.log(Logger.FINEST, "Error deleting layer " + annotationName + " : " + e.getMessage());
@@ -543,7 +540,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
     public HttpRequestFactory getRequestFactory() {
         if (this.requestFactory == null) {
             this.requestFactory = HTTP_TRANSPORT.createRequestFactory(new HttpRequestInitializer() {
-                @Override
                 public void initialize(HttpRequest request) throws IOException {
                     request.setParser(new JsonObjectParser(new JacksonFactory()));
                 }
@@ -568,6 +564,7 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
 
             HttpContent body = new ByteArrayContent("application/json", jsonContent);
             HttpRequest request = getRequestFactory().buildPostRequest(postUrl, body);
+            request.setConnectTimeout(120000);
             request.execute();
         } catch (IOException e) {
             e.printStackTrace();
