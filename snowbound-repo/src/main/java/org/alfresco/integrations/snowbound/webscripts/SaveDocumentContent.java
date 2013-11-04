@@ -1,5 +1,6 @@
 package org.alfresco.integrations.snowbound.webscripts;
 
+import org.alfresco.integrations.snowbound.entity.Document;
 import org.alfresco.model.ContentModel;
 import org.alfresco.service.ServiceRegistry;
 import org.alfresco.service.cmr.repository.ContentService;
@@ -11,7 +12,11 @@ import org.springframework.extensions.webscripts.AbstractWebScript;
 import org.springframework.extensions.webscripts.WebScriptRequest;
 import org.springframework.extensions.webscripts.WebScriptResponse;
 
+import com.google.gson.Gson;
+
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Author: Kyle Adams
@@ -26,12 +31,18 @@ public class SaveDocumentContent  extends AbstractWebScript {
 
     public void execute(WebScriptRequest request, WebScriptResponse response) throws IOException {
         try{
-            documentNodeRef = new NodeRef(request.getParameter("nodeRef"));
+            Document document = new Gson().fromJson(request.getContent().getContent(), Document.class);
+            documentNodeRef = new NodeRef(document.getId());
             logger.debug("NodeRef: " + documentNodeRef.toString());
 
             ContentService contentService = serviceRegistry.getContentService();
             ContentWriter contentWriter = contentService.getWriter(documentNodeRef, ContentModel.PROP_CONTENT, true);
-            contentWriter.putContent(request.getContent().getInputStream());
+            
+            InputStream documentInputStream = null;
+            if(document.getContent() != null){
+            	documentInputStream = new ByteArrayInputStream(document.getContent());
+            }
+            contentWriter.putContent(documentInputStream);
             logger.debug("Successfully wrote content for: " + documentNodeRef + " with content url: " + contentWriter.getContentUrl());
         }
         catch(Exception e){

@@ -318,10 +318,9 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             Document document = new Document();
             document.setId(nodeRef.replace("workspace/", "workspace://"));
             document.setContent(documentContent);
+            
             String jsonString = new Gson().toJson(document);
-            logger.log(Logger.FINEST, "Document Gson String: " + jsonString);
             postJsonHttpRequest(saveDocumentContentUrl, jsonString.getBytes());
-
 
             contentHandlerResult.put(ContentHandlerResult.DOCUMENT_ID_TO_RELOAD, documentKey);
         }
@@ -428,8 +427,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                 myBookmark.setId(bookmark.getId());
             }
             String jsonString = new Gson().toJson(myBookmark);
-            logger.log(Logger.FINEST, "Bookmark Json String: " + jsonString);
-
             GenericUrl saveBookmarkContentUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/SaveBookmarkContent?alf_ticket=" + authenticationTicket);
             postJsonHttpRequest(saveBookmarkContentUrl, jsonString.getBytes());
@@ -457,8 +454,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             Annotation annotation = annotationHashMap.get(annotationName);
 
             String jsonString = new Gson().toJson(annotation);
-            logger.log(Logger.FINEST, "Delete annotation Json String: " + jsonString);
-
             GenericUrl deleteAnnotationUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/DeleteAnnotation?alf_ticket=" + authenticationTicket);
             postJsonHttpRequest(deleteAnnotationUrl, jsonString.getBytes());
@@ -490,7 +485,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             String preferenceXMJsonResponse = sendHttpRequest(preferenceXMLUrl).parseAsString();
             preferenceXML = new Gson().fromJson(preferenceXMJsonResponse, PreferenceXML.class);
             String xmlString = new String(preferenceXML.getContent());
-            logger.log(Logger.FINEST, "Retrieved preference XML content: " + xmlString);
 
             result.put(ContentHandlerResult.KEY_CLIENT_PREFERENCES_XML, xmlString);
         }
@@ -510,7 +504,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
         try{
             preferenceXML.setContent(contentHandlerInput.getClientPreferencesXML().getBytes());
             String jsonString = new Gson().toJson(preferenceXML);
-            logger.log(Logger.FINEST, "Preference XML Json String: " + jsonString);
 
             GenericUrl savePreferenceXMLContentUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/SavePreferenceXMLContent?alf_ticket=" + authenticationTicket);
