@@ -360,7 +360,8 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                         annotation.setRedactionFlag(redactionFlag);
                     }
                     if (redactionFlag == true){
-                        annotation.setPermissionLevel(PERM_REDACTION.intValue());
+//                        annotation.setPermissionLevel(PERM_REDACTION.intValue());
+                    	annotation.setPermissionLevel(0);
                     }
                     else{
                         annotation.setPermissionLevel(PERM_DELETE.intValue());
