@@ -20,12 +20,9 @@ Share presentation layer that contains configuration for the Snowbound VirtualVi
 * Run the following Maven commands for each project:
 
 ```bash
-$ mvn clean
+$ mvn clean package
 ```
 
-```bash
-$ mvn package
-```
 * Copy the snowbound-repo-*.amp to the <ALF_ROOT>/amps directory.
 * Copy the snowbound-share-*.amp to the <ALF_ROOT>/amps_share directory.
 * Make sure you Alfresco intance is stopped.
@@ -43,12 +40,9 @@ $ ./apply_amps -verbose -force
 * Run the following commands:
 
 ```bash
-$ mvn clean
+$ mvn clean package
 ```
 
-```bash
-$ mvn package
-```
 * Copy the alfresco-content-handler.jar file to the VirtualViewerJavaHTML5/WEB-INF/lib directory
 * In the WEB-INF/web.xml file set the contentHandlerClass param-value to "org.alfresco.integrations.snowbound.RestContentHandler"
 
