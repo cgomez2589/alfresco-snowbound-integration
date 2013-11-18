@@ -129,16 +129,12 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
 
 
             String annotationsJsonResponse = sendHttpRequest(annotationsUrl).parseAsString();
-            logger.log(Logger.FINEST, "Annotation Json Response: " + annotationsJsonResponse);
-
             AnnotationList annotations = new Gson().fromJson(annotationsJsonResponse, AnnotationList.class);
             logger.log(Logger.FINEST, "Annotation From Json: " + annotations);
 
 
             annotationHashMap = new HashMap<String, Annotation>();
             annotationList = annotations.getAnnotations();
-
-
 
             String[] annotationNames = new String[annotations.getAnnotations().size()];
             logger.log(Logger.FINEST, "Annotation List Size: " + annotationList.size());
@@ -174,7 +170,11 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             logger.log(Logger.FINEST, "Retrieved Annotation: " + annotation.getName() + " with NodeRef: " + annotation.getId());
 
             properties.put(AnnotationLayer.PROPERTIES_KEY_PERMISSION_LEVEL, annotation.getPermissionLevel());
-            properties.put(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG, annotation.getRedactionFlag());
+            logger.log(Logger.FINEST, "Annotation Permission Level: " + properties.get(AnnotationLayer.PROPERTIES_KEY_PERMISSION_LEVEL));
+
+            properties.put(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG, new Boolean(annotation.getRedactionFlag()));
+            logger.log(Logger.FINEST, "Annotation Redaction Flag: " + properties.get(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG));
+
 
             contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_PROPERTIES, properties);
         }
@@ -189,12 +189,19 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
         ContentHandlerResult contentHandlerResult = new ContentHandlerResult();
         try{
             logger.log(Logger.FINEST, "Entering getAnnotationContent method...");
-            Annotation annotation = annotationHashMap.get(contentHandlerInput.getAnnotationId());
+            
+            if(!isNullOrEmpty(annotationHashMap)){
+                Annotation annotation = annotationHashMap.get(contentHandlerInput.getAnnotationId());
+                logger.log(Logger.FINEST, "Annotation Content: " + new String(annotation.getContent()));
 
-            logger.log(Logger.FINEST, "Annotation Content: " + new String(annotation.getContent()));
+                contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_CONTENT, annotation.getContent());
+                contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_DISPLAY_NAME, annotation.getName());
+            }
+            else{
+            	return null;
+            }
 
-            contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_CONTENT, annotation.getContent());
-            contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_DISPLAY_NAME, annotation.getName());
+            
         }
         catch (Exception e){
             logger.log(Logger.SEVERE, "Failed to get annotation content: " + e.getMessage());
@@ -314,10 +321,9 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             Document document = new Document();
             document.setId(nodeRef.replace("workspace/", "workspace://"));
             document.setContent(documentContent);
+            
             String jsonString = new Gson().toJson(document);
-            logger.log(Logger.FINEST, "Document Gson String: " + jsonString);
             postJsonHttpRequest(saveDocumentContentUrl, jsonString.getBytes());
-
 
             contentHandlerResult.put(ContentHandlerResult.DOCUMENT_ID_TO_RELOAD, documentKey);
         }
@@ -349,21 +355,23 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                     logger.log(Logger.FINEST, " Annotation Permission Level: " + tmpPermissionLevel);
 
                     boolean redactionFlag = false;
-                    int permissionLevel = PERM_VIEW.intValue();
+                    int permissionLevel = PERM_DELETE.intValue();
 
                     if (tmpRedactionFlag != null){
                         redactionFlag = tmpRedactionFlag.booleanValue();
                         annotation.setRedactionFlag(redactionFlag);
                     }
+                    if(tmpPermissionLevel != null){
+                    	permissionLevel = tmpPermissionLevel.intValue();
+                    }
+                    
+                    if (redactionFlag == true){
+                    	annotation.setPermissionLevel(PERM_REDACTION.intValue());                       
+                    }
+                    else{
+                        annotation.setPermissionLevel(PERM_DELETE.intValue());
+                    }
 
-                    annotation.setPermissionLevel(PERM_DELETE.intValue());
-                    if (permissionLevel <= PERM_REDACTION.intValue()){
-                        annotationLayer += "-redactionBurn";
-                        annotation.setPermissionLevel(PERM_REDACTION.intValue());
-                    }
-                    else if (redactionFlag == true){
-                        annotationLayer += "-redactionEdit";
-                    }
                     annotation.setContent(annotationContent);
                     annotation.setName(annotationLayer);
                     annotation.setParentNodeRef(nodeRef.replace("workspace/", "workspace://"));
@@ -384,7 +392,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                     GenericUrl saveAnnotationContentUrl = new GenericUrl(
                             this.alfrescoBaseUrl + "/service/integrations/snowbound/SaveAnnotationContent?alf_ticket=" + authenticationTicket);
                     postJsonHttpRequest(saveAnnotationContentUrl, jsonString.getBytes());
-
                     logger.log(Logger.FINEST, "  saveAnnotationContent, Saving layer: " + annotationLayer);
                 }
             }
@@ -426,12 +433,8 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                 myBookmark.setId(bookmark.getId());
             }
             String jsonString = new Gson().toJson(myBookmark);
-            logger.log(Logger.FINEST, "Bookmark Json String: " + jsonString);
-
             GenericUrl saveBookmarkContentUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/SaveBookmarkContent?alf_ticket=" + authenticationTicket);
-            logger.log(Logger.FINEST, " Using url: " + saveBookmarkContentUrl);
-
             postJsonHttpRequest(saveBookmarkContentUrl, jsonString.getBytes());
 
             contentHandlerResult.put(ContentHandlerResult.DOCUMENT_ID_TO_RELOAD, documentID);
@@ -457,14 +460,9 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             Annotation annotation = annotationHashMap.get(annotationName);
 
             String jsonString = new Gson().toJson(annotation);
-            logger.log(Logger.FINEST, "Bookmark Json String: " + jsonString);
-
             GenericUrl deleteAnnotationUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/DeleteAnnotation?alf_ticket=" + authenticationTicket);
-            logger.log(Logger.FINEST, " Using url: " + deleteAnnotationUrl);
-
             postJsonHttpRequest(deleteAnnotationUrl, jsonString.getBytes());
-
         }
         catch (Throwable e){
             logger.log(Logger.FINEST, "Error deleting layer " + annotationName + " : " + e.getMessage());
@@ -493,7 +491,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
             String preferenceXMJsonResponse = sendHttpRequest(preferenceXMLUrl).parseAsString();
             preferenceXML = new Gson().fromJson(preferenceXMJsonResponse, PreferenceXML.class);
             String xmlString = new String(preferenceXML.getContent());
-            logger.log(Logger.FINEST, "Retrieved preference XML content: " + xmlString);
 
             result.put(ContentHandlerResult.KEY_CLIENT_PREFERENCES_XML, xmlString);
         }
@@ -513,7 +510,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
         try{
             preferenceXML.setContent(contentHandlerInput.getClientPreferencesXML().getBytes());
             String jsonString = new Gson().toJson(preferenceXML);
-            logger.log(Logger.FINEST, "Preference XML Json String: " + jsonString);
 
             GenericUrl savePreferenceXMLContentUrl = new GenericUrl(
                     this.alfrescoBaseUrl + "/service/integrations/snowbound/SavePreferenceXMLContent?alf_ticket=" + authenticationTicket);
@@ -543,7 +539,6 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
     public HttpRequestFactory getRequestFactory() {
         if (this.requestFactory == null) {
             this.requestFactory = HTTP_TRANSPORT.createRequestFactory(new HttpRequestInitializer() {
-                @Override
                 public void initialize(HttpRequest request) throws IOException {
                     request.setParser(new JsonObjectParser(new JacksonFactory()));
                 }
@@ -568,6 +563,7 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
 
             HttpContent body = new ByteArrayContent("application/json", jsonContent);
             HttpRequest request = getRequestFactory().buildPostRequest(postUrl, body);
+            request.setConnectTimeout(120000);
             request.execute();
         } catch (IOException e) {
             e.printStackTrace();

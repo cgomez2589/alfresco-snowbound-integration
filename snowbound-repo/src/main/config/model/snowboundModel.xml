@@ -14,19 +14,11 @@
         <namespace uri="http://www.alfresco.org/model/snowbound/1.0" prefix="vv" />
     </namespaces>
 
-<!--===========================================================================================================
-    Constraints
-============================================================================================================-->
-
     <constraints>
     </constraints>
 
-<!--===========================================================================================================
-    Types
-============================================================================================================-->
-
+    <!-- Snowbound VirtualViewer Content Types -->
     <types>        
-        <!-- Snowbound VirtualViewer Content Types -->
         <type name="vv:annotation">
             <title>Snowbound Annotation Type</title>
             <parent>cm:content</parent>
@@ -54,8 +46,8 @@
         </type>
     </types>
 
+    <!-- Snowbound VirtualViewer Annotable Aspects -->
     <aspects>
-        <!-- Snowbound VirtualViewer Annotable Aspect -->
         <aspect name="vv:annotable">
             <title>Snowbound VirtualViewer Annotation Aspect</title>
             <associations>

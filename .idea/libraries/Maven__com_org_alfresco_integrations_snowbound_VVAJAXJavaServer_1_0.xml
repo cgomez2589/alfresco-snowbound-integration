@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Maven: com.org.alfresco.integrations.snowbound:VVAJAXJavaServer:1.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/alfresco-content-handler/web/WEB-INF/lib/VVAJAXJavaServer.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

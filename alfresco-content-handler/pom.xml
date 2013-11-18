@@ -5,7 +5,10 @@
   <groupId>alfresco-content-handler</groupId>
   <artifactId>alfresco-content-handler</artifactId>
   <version>0.1-RC1</version>
+<<<<<<< HEAD
   <packaging>jar</packaging>
+=======
+>>>>>>> master
 
   <name>alfresco-content-handler</name>
   <url>http://maven.apache.org</url>

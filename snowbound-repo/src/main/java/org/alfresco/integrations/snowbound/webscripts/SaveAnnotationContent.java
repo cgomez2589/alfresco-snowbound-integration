@@ -74,6 +74,7 @@ public class SaveAnnotationContent  extends AbstractWebScript {
                 }
                 else{
                     NodeRef annotationNodeRef = new NodeRef(annotation.getId());
+                    setAnnotationProperties(annotationNodeRef, annotationName, redactionFlag, permissionLevel);
                     setAnnotationContent(annotationNodeRef, annotationInputStream);
                 }
             }
@@ -83,7 +84,7 @@ public class SaveAnnotationContent  extends AbstractWebScript {
         }
     }
 
-    private void createAnnotation(String annotationName,boolean redactionFlag, int permissionLevel, InputStream annotationInputStream){
+    private void createAnnotation(String annotationName, boolean redactionFlag, int permissionLevel, InputStream annotationInputStream){
         try{
             Map<QName, Serializable> annotationProperties = new HashMap<QName, Serializable>();
             annotationProperties.put(ContentModel.PROP_NAME, annotationName);
@@ -96,7 +97,7 @@ public class SaveAnnotationContent  extends AbstractWebScript {
                 QName.createQName(NamespaceService.CONTENT_MODEL_1_0_URI, annotationName),
                 SnowboundContentModel.TYPE_ANNOTATION,
                 annotationProperties).getChildRef();
-            logger.debug("Successfully create annotation: " + nodeService.getProperty(annotationNodeRef, ContentModel.PROP_NAME));
+            logger.debug("Successfully created annotation: " + nodeService.getProperty(annotationNodeRef, ContentModel.PROP_NAME));
 
             Map<QName, Serializable> hiddenAspectProperties = new HashMap<QName, Serializable>();
             hiddenAspectProperties.put(ContentModel.PROP_VISIBILITY_MASK, 32768);
@@ -122,6 +123,19 @@ public class SaveAnnotationContent  extends AbstractWebScript {
         }
         catch (Exception e){
             logger.error("Failed to set annotation content.", e);
+        }
+    }
+
+    private void setAnnotationProperties(NodeRef annotationNodeRef, String annotationName, boolean redactionFlag, int permissionLevel){
+        try{
+            Map<QName, Serializable> annotationProperties = new HashMap<QName, Serializable>();
+            annotationProperties.put(ContentModel.PROP_NAME, annotationName);
+            annotationProperties.put(SnowboundContentModel.PROP_REDACTION_FLAG, redactionFlag);
+            annotationProperties.put(SnowboundContentModel.PROP_PERMISSION_LEVEL, permissionLevel);
+            nodeService.setProperties(annotationNodeRef, annotationProperties);
+        }
+        catch (Exception e){
+            logger.error("Failed to set annotation properties.", e);
         }
     }
 

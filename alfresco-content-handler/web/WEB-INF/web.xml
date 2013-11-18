@@ -22,6 +22,10 @@
             <param-name>contentHandlerClass</param-name>
             <param-value>org.alfresco.integrations.snowbound.RestContentHandler</param-value>
         </init-param>
+        <init-param> 
+			<param-name>supportRedactions</param-name> 
+			<param-value>true</param-value> 
+		</init-param> 
         <init-param>
             <param-name>filePath</param-name>
             <param-value>./Sample-Documents</param-value>
