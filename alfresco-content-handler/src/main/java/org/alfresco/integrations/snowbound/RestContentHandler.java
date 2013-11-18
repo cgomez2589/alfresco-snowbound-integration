@@ -129,16 +129,12 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
 
 
             String annotationsJsonResponse = sendHttpRequest(annotationsUrl).parseAsString();
-            logger.log(Logger.FINEST, "Annotation Json Response: " + annotationsJsonResponse);
-
             AnnotationList annotations = new Gson().fromJson(annotationsJsonResponse, AnnotationList.class);
             logger.log(Logger.FINEST, "Annotation From Json: " + annotations);
 
 
             annotationHashMap = new HashMap<String, Annotation>();
             annotationList = annotations.getAnnotations();
-
-
 
             String[] annotationNames = new String[annotations.getAnnotations().size()];
             logger.log(Logger.FINEST, "Annotation List Size: " + annotationList.size());
@@ -193,12 +189,19 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
         ContentHandlerResult contentHandlerResult = new ContentHandlerResult();
         try{
             logger.log(Logger.FINEST, "Entering getAnnotationContent method...");
-            Annotation annotation = annotationHashMap.get(contentHandlerInput.getAnnotationId());
+            
+            if(!isNullOrEmpty(annotationHashMap)){
+                Annotation annotation = annotationHashMap.get(contentHandlerInput.getAnnotationId());
+                logger.log(Logger.FINEST, "Annotation Content: " + new String(annotation.getContent()));
 
-            logger.log(Logger.FINEST, "Annotation Content: " + new String(annotation.getContent()));
+                contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_CONTENT, annotation.getContent());
+                contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_DISPLAY_NAME, annotation.getName());
+            }
+            else{
+            	return null;
+            }
 
-            contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_CONTENT, annotation.getContent());
-            contentHandlerResult.put(ContentHandlerResult.KEY_ANNOTATION_DISPLAY_NAME, annotation.getName());
+            
         }
         catch (Exception e){
             logger.log(Logger.SEVERE, "Failed to get annotation content: " + e.getMessage());
@@ -348,20 +351,22 @@ public class RestContentHandler implements FlexSnapSIContentHandlerInterface, Fl
                     Boolean tmpRedactionFlag = (Boolean) annProperties.get(AnnotationLayer.PROPERTIES_KEY_REDACTION_FLAG);
                     logger.log(Logger.FINEST, " Annotation Redaction Flag: " + tmpRedactionFlag);
 
-                    // TODO: this always returns null for some reason. Debug at a later date.
                     Integer tmpPermissionLevel = (Integer) annProperties.get(AnnotationLayer.PROPERTIES_KEY_PERMISSION_LEVEL);
                     logger.log(Logger.FINEST, " Annotation Permission Level: " + tmpPermissionLevel);
 
                     boolean redactionFlag = false;
-                    //int permissionLevel = PERM_VIEW.intValue();
+                    int permissionLevel = PERM_DELETE.intValue();
 
                     if (tmpRedactionFlag != null){
                         redactionFlag = tmpRedactionFlag.booleanValue();
                         annotation.setRedactionFlag(redactionFlag);
                     }
+                    if(tmpPermissionLevel != null){
+                    	permissionLevel = tmpPermissionLevel.intValue();
+                    }
+                    
                     if (redactionFlag == true){
-//                        annotation.setPermissionLevel(PERM_REDACTION.intValue());
-                    	annotation.setPermissionLevel(0);
+                    	annotation.setPermissionLevel(PERM_REDACTION.intValue());                       
                     }
                     else{
                         annotation.setPermissionLevel(PERM_DELETE.intValue());
