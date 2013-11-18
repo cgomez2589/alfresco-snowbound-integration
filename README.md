@@ -27,10 +27,10 @@ $ mvn clean package
 * Copy the snowbound-share-*.amp to the <ALF_ROOT>/amps_share directory.
 * Make sure you Alfresco intance is stopped.
 * Change directory to the <ALF_ROOT>/bin directory.
-* Run the following command (note that I will remove the -force arg when I restructure the projects):
+* Run the following command:
 
 ```bash
-$ ./apply_amps -verbose -force
+$ ./apply_amps -verbose
 ```
 * Review the output and confirm that the Snowbound VirtualViewer Integration module was applied successfully.
 * Download the VirtualViewer - HTML5 Java version from: http://register.snowbound.com/VirtualViewer_eval.html
