@@ -1,6 +1,8 @@
 This project provides an integration between the Alfresco Share collaboration UI and the Snowbound VirtualViewer.
 http://www.alfresco.com/
-http://www.snowbound.com/
+http://www.snowbound.com
+
+![Alfresco Snowbound VirtualViewer Integration](http://note.io/HX2qdK "Alfresco Snowbound VirtualViewer Integration")
 
 # alfresco-content-handler
 Snowbound Content Handler java class that integration with Alfresco's Web Scripts (RESTful services)
