@@ -5,7 +5,7 @@ http://www.snowbound.com
 ![Alfresco Snowbound VirtualViewer Integration](screenshots/virtualviewer-integration.png)
 
 # alfresco-content-handler
-Snowbound Content Handler java class that integration with Alfresco's Web Scripts (RESTful services)
+Snowbound Content Handler java class that integrates with Alfresco's Web Scripts (RESTful services)
 
 VirtualViewer Reference: http://www.virtualviewer.com/VirtualViewerJavaAJAXHelp/virtualviewer.htm
 
